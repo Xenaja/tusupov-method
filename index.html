@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Метод Ержана Тусупова — программа 5 дней в Москве</title>
+<title>Метод Ержана Тусупова – программа 5 дней в Москве</title>
 <meta name="description" content="Авторская 5-дневная программа работы с телом, эмоциями и внутренним состоянием. Приём в Москве с 12 августа. Обучение методу для специалистов телесных практик.">
 <link rel="canonical" href="https://xenaja.github.io/tusupov-method/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Метод Ержана Тусупова — программа 5 дней">
+<meta property="og:title" content="Метод Ержана Тусупова – программа 5 дней">
 <meta property="og:description" content="Три уровня: тело, эмоции, внутреннее состояние. Работаем не с симптомом, а с причиной. Москва, приём с 12 августа.">
 <meta property="og:url" content="https://xenaja.github.io/tusupov-method/">
 <meta property="og:image" content="https://xenaja.github.io/tusupov-method/og-image.jpg">
@@ -77,7 +77,8 @@ a:hover{color:var(--accent-h)}
 .wrap{max-width:var(--container);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 
 h1,h2{font-family:var(--font-display);font-weight:500}
-h2{font-size:clamp(24px,4.2vw,42px);line-height:1.16;letter-spacing:.07em;text-transform:uppercase;text-wrap:balance}
+h2{font-size:clamp(24px,4.2vw,42px);line-height:1.16;text-wrap:balance}
+.h2-caps{letter-spacing:.07em;text-transform:uppercase}
 .lead{color:var(--muted);font-size:clamp(16px,2.6vw,20px);line-height:1.55;margin-top:16px;max-width:52ch}
 
 .btn{
@@ -99,11 +100,9 @@ h2{font-size:clamp(24px,4.2vw,42px);line-height:1.16;letter-spacing:.07em;text-t
 .hero-veil{position:absolute;inset:0;background:
   linear-gradient(to top, rgba(14,11,7,.96) 0%, rgba(14,11,7,.66) 30%, rgba(14,11,7,.12) 62%, rgba(14,11,7,.3) 100%),
   linear-gradient(to right, rgba(14,11,7,.82) 0%, rgba(14,11,7,.4) 34%, rgba(14,11,7,0) 62%)}
-.hero-top{position:absolute;top:0;left:0;right:0;padding:clamp(20px,4vw,34px) var(--pad);z-index:2}
-.hero-top span{font-family:var(--font-display);font-size:20px;letter-spacing:.02em}
 .hero-body{position:relative;z-index:2;max-width:var(--container);margin:0 auto;width:100%;padding:0 var(--pad) clamp(52px,9vw,104px)}
 .hero-badge{display:inline-block;font-size:clamp(11.5px,2.2vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(193,162,104,.4);padding:9px 15px;border-radius:2px;margin-bottom:26px}
-.hero h1{font-size:clamp(46px,10.5vw,110px);line-height:1;letter-spacing:-.015em;max-width:15ch;text-wrap:balance}
+.hero h1{font-size:clamp(46px,10.5vw,84px);line-height:1;letter-spacing:-.015em;max-width:15ch;text-wrap:balance}
 .hero-sub{margin-top:22px;color:var(--ink-soft);font-size:clamp(17px,3vw,22px);line-height:1.5;max-width:44ch}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:36px}
 
@@ -166,6 +165,7 @@ h2{font-size:clamp(24px,4.2vw,42px);line-height:1.16;letter-spacing:.07em;text-t
 .tl-day{position:relative;padding-left:76px;padding-bottom:clamp(28px,5vw,44px)}
 .tl-marker{position:absolute;left:0;top:0;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg2);border:1px solid rgba(236,228,213,.2);color:var(--muted);font-family:var(--font-display);font-size:24px;z-index:1;transition:border-color .5s,color .5s}
 .tl-day.is-on .tl-marker{border-color:var(--accent);color:var(--accent)}
+.tl-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .tl-title{font-family:var(--font-display);font-size:clamp(22px,3.4vw,30px);margin-bottom:6px;line-height:1.15}
 .tl-text{color:var(--muted);font-size:clamp(15px,2.4vw,17px);line-height:1.65;max-width:600px}
 
@@ -200,8 +200,12 @@ h2{font-size:clamp(24px,4.2vw,42px);line-height:1.16;letter-spacing:.07em;text-t
 .school-callout{margin-top:clamp(36px,5vw,52px);background:var(--lbg2);border-radius:4px;padding:clamp(24px,4vw,32px)}
 .school-callout .c1{font-size:clamp(15px,2.4vw,17px);line-height:1.55;font-weight:500}
 .school-callout .c2{color:var(--lmuted);font-size:clamp(14px,2.2vw,15px);margin-top:8px}
-.btn-dark{background:var(--link2);color:var(--lbg);margin-top:clamp(28px,4vw,36px)}
+.btn-dark{background:var(--link2);color:var(--lbg)}
 .btn-dark:hover{background:#000;color:var(--lbg);transform:translateY(-2px)}
+.btn-ghost-light{color:var(--link2);font-weight:400;letter-spacing:.02em;border:1px solid rgba(34,29,22,.4)}
+.btn-ghost-light:hover{color:var(--link2);border-color:var(--link2);background:rgba(34,29,22,.06)}
+.school-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:clamp(28px,4vw,36px)}
+.midcta{padding:clamp(28px,5vw,48px) var(--pad);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 24px}
 
 /* ---------- FAQ ---------- */
 .faq-wrap{max-width:780px}
@@ -213,6 +217,10 @@ h2{font-size:clamp(24px,4.2vw,42px);line-height:1.16;letter-spacing:.07em;text-t
 .faq-a{display:none;padding:0 0 clamp(22px,3.5vw,28px);max-width:60ch}
 .faq-item.open .faq-a{display:block}
 .faq-a p{color:var(--muted);font-size:clamp(15px,2.4vw,17px);line-height:1.65;margin-bottom:12px}
+.faq-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:16px}
+.faq-cta .alt{color:var(--muted);font-size:14px}
+.faq-cta .alt a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.faq-cta .alt a:hover{color:var(--accent)}
 
 /* ---------- Финал ---------- */
 .final{position:relative;background:radial-gradient(120% 100% at 50% 0%, #201a12 0%, #141009 60%, #0f0c07 100%);padding-top:clamp(80px,13vw,150px);overflow:hidden}
@@ -261,17 +269,17 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
   <div class="hero-media">
     <picture>
       <source srcset="photos/hero/hero.webp" type="image/webp">
-      <img src="photos/hero/hero.jpg" alt="Ержан Тусупов работает с человеком — руки на голове" loading="eager" fetchpriority="high" width="941" height="1672">
+      <img src="photos/hero/hero.jpg" alt="Ержан Тусупов работает с человеком – руки на голове" loading="eager" fetchpriority="high" width="941" height="1672">
     </picture>
   </div>
   <div class="hero-veil" aria-hidden="true"></div>
-  <div class="hero-top"><span>Ержан Тусупов</span></div>
   <div class="hero-body">
     <span class="hero-badge">Программа 5 дней · Москва · приём с 12 августа</span>
     <h1>Авторский метод Ержана Тусупова</h1>
     <p class="hero-sub">Три уровня: тело, эмоции, внутреннее состояние. Работаем не с симптомом, а с причиной.</p>
     <div class="hero-cta">
-      <a class="btn btn-solid" data-wa="program" href="#" target="_blank" rel="noopener">Записаться на программу</a>
+      <a class="btn btn-solid" data-tg="program_hero" href="#" target="_blank" rel="noopener">Записаться в Telegram</a>
+      <a class="btn btn-ghost" data-wa="program" href="#" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-ghost" href="#obuchenie">Обучение методу</a>
     </div>
   </div>
@@ -301,14 +309,14 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
       <div class="about-photo">
         <picture>
           <source srcset="photos/portrait.webp" type="image/webp">
-          <img src="photos/portrait.jpg" alt="Ержан Тусупов — портрет" loading="lazy" decoding="async" width="941" height="1672">
+          <img src="photos/portrait.jpg" alt="Ержан Тусупов – портрет" loading="lazy" decoding="async" width="941" height="1672">
         </picture>
       </div>
       <div class="about">
         <h2>Человек, который создал метод</h2>
-        <p>Он не из учебников — родился в работе с людьми, которым не помогали стандартные подходы. Каждая техника появилась для конкретного человека, когда ничего другого не срабатывало.</p>
-        <p>В основе — школы, которые редко собираются в руках одного специалиста: краниальные и фасциальные техники, работа с внутренними органами, биодинамика, психосоматика и подсознание.</p>
-        <p>Ержан учился в казахстанско-российской школе остеопатии и лично у Александра Нееля (D.O., Франция) — одного из ведущих преподавателей биодинамики.</p>
+        <p>Он не из учебников – родился в работе с людьми, которым не помогали стандартные подходы. Каждая техника появилась для конкретного человека, когда ничего другого не срабатывало.</p>
+        <p>В основе – школы, которые редко собираются в руках одного специалиста: краниальные и фасциальные техники, работа с внутренними органами, биодинамика, психосоматика и подсознание.</p>
+        <p>Ержан учился в казахстанско-российской школе остеопатии и лично у Александра Нееля (D.O., Франция) – одного из ведущих преподавателей биодинамики.</p>
       </div>
     </div>
 
@@ -323,7 +331,7 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
     <div style="margin-top:clamp(48px,7vw,80px);">
       <div class="eyebrow">Документы об обучении</div>
       <div class="lane" id="certLane"></div>
-      <p class="cert-note">Документы оформлены на паспортное имя — Ержан Кабдрашит. Тусупов — имя, под которым Ержан работает и известен.</p>
+      <p class="cert-note">Документы оформлены на паспортное имя – Ержан Кабдрашит. Тусупов – имя, под которым Ержан работает и известен.</p>
     </div>
   </div>
 </section>
@@ -332,20 +340,20 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 <section class="section section-tint">
   <div class="wrap reveal" style="max-width:820px;">
     <h2>С чем приходят на программу</h2>
-    <p class="lead">Чаще всего к Ержану приходят, когда массаж и процедуры уже пробовали — а результат не удержался.</p>
+    <p class="lead">Чаще всего к Ержану приходят, когда массаж и процедуры уже пробовали – а результат не удержался.</p>
     <div class="pains">
       <div class="pain">
         <span class="pain-num" aria-hidden="true">01</span>
         <div>
           <div class="pain-title">Тело</div>
-          <div class="pain-text">Хронические боли в спине, пояснице, шее. Скованность, ограниченная подвижность. Дискомфорт уходит после сеанса — и через неделю всё как было.</div>
+          <div class="pain-text">Хронические боли в спине, пояснице, шее. Скованность, ограниченная подвижность. Дискомфорт уходит после сеанса – и через неделю всё как было.</div>
         </div>
       </div>
       <div class="pain">
         <span class="pain-num" aria-hidden="true">02</span>
         <div>
           <div class="pain-title">Состояние</div>
-          <div class="pain-text">Постоянная тревожность и внутреннее напряжение. Усталость, которая не проходит после отдыха. Эмоциональное выгорание — сил нет даже на простые вещи.</div>
+          <div class="pain-text">Постоянная тревожность и внутреннее напряжение. Усталость, которая не проходит после отдыха. Эмоциональное выгорание – сил нет даже на простые вещи.</div>
         </div>
       </div>
       <div class="pain">
@@ -363,9 +371,9 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 <section class="section section-light">
   <div class="wrap reveal why-grid">
     <div>
-      <h2>Снять симптом — мало</h2>
-      <p>Тело помнит стрессы, страхи, тяжёлые события. Это напряжение оседает в мышцах и фасциях — и никакой массаж не убирает его надолго, потому что причина остаётся внутри.</p>
-      <p>Метод Ержана работает одновременно на трёх уровнях — тело, эмоции, внутреннее состояние. Когда внутренний источник напряжения исчезает, телу больше незачем зажиматься.</p>
+      <h2>Снять симптом – мало</h2>
+      <p>Тело помнит стрессы, страхи, тяжёлые события. Это напряжение оседает в мышцах и фасциях – и никакой массаж не убирает его надолго, потому что причина остаётся внутри.</p>
+      <p>Метод Ержана работает одновременно на трёх уровнях – тело, эмоции, внутреннее состояние. Когда внутренний источник напряжения исчезает, телу больше незачем зажиматься.</p>
     </div>
     <div class="why-svg">
       <svg viewBox="0 0 300 300" width="100%" style="max-width:340px;" aria-hidden="true">
@@ -384,32 +392,38 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 <section class="section section-tint">
   <div class="wrap reveal" style="max-width:820px;">
     <h2>Как работает программа</h2>
-    <p class="lead">Каждый день снимает свой слой — и открывает следующий.</p>
+    <p class="lead">Каждый день снимает свой слой – и открывает следующий.</p>
     <div class="tl">
       <div class="tl-rail" aria-hidden="true"></div>
       <div class="tl-fill" id="tlFill" aria-hidden="true"></div>
+      <!-- ⚠ Соответствие дней уровням – согласовать с заказчиком до публикации -->
       <div class="tl-day" data-day="0">
         <div class="tl-marker" aria-hidden="true">1</div>
+        <div class="tl-kicker">уровень: тело</div>
         <div class="tl-title">День 1 · Память тела</div>
         <div class="tl-text">Начинаем с физического: фасции, зажимы, старые компенсации. Мягкие мануальные техники. Многие впервые за годы чувствуют, где именно накопилось напряжение.</div>
       </div>
       <div class="tl-day" data-day="1">
         <div class="tl-marker" aria-hidden="true">2</div>
+        <div class="tl-kicker">уровень: эмоции</div>
         <div class="tl-title">День 2 · Страх и контроль</div>
         <div class="tl-text">Переходим к причинам: тревога, ожидание опасности, привычка всё контролировать. Пока внутри нет ощущения безопасности, мышцы не расслабятся.</div>
       </div>
       <div class="tl-day" data-day="2">
         <div class="tl-marker" aria-hidden="true">3</div>
+        <div class="tl-kicker">уровень: состояние</div>
         <div class="tl-title">День 3 · Опора</div>
         <div class="tl-text">После первых двух этапов внутри появляется свободное место. Заполняем его опорой: собственный ресурс, доверие себе.</div>
       </div>
       <div class="tl-day" data-day="3">
         <div class="tl-marker" aria-hidden="true">4</div>
+        <div class="tl-kicker">уровень: состояние</div>
         <div class="tl-title">День 4 · Тишина</div>
-        <div class="tl-text">Голова успокаивается последней. Четвёртый этап — о ясности: меньше мысленного шума, суеты, прокручивания.</div>
+        <div class="tl-text">Голова успокаивается последней. Четвёртый этап – о ясности: меньше мысленного шума, суеты, прокручивания.</div>
       </div>
       <div class="tl-day" data-day="4">
         <div class="tl-marker" aria-hidden="true">5</div>
+        <div class="tl-kicker">все три уровня</div>
         <div class="tl-title">День 5 · Интеграция</div>
         <div class="tl-text">Закрепляем результат, чтобы новое состояние не закончилось вместе с программой, а осталось в обычной жизни.</div>
       </div>
@@ -421,19 +435,19 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 <section class="section">
   <div class="wrap reveal" style="max-width:820px;">
     <h2>С чем вы уйдёте</h2>
-    <p class="lead">Программа заканчивается — результат остаётся.</p>
+    <p class="lead">Программа заканчивается – результат остаётся.</p>
     <div class="gains">
       <div class="gain">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div>Тело перестаёт быть фоном. Вы замечаете напряжение раньше, чем оно превращается в боль — и знаете, что с ним делать.</div>
+        <div>Тело перестаёт быть фоном. Вы замечаете напряжение раньше, чем оно превращается в боль – и знаете, что с ним делать.</div>
       </div>
       <div class="gain">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div>Реакции меняются. Что раньше вызывало зажим и спазм — теперь проходит мимо или задевает слабее.</div>
+        <div>Реакции меняются. Что раньше вызывало зажим и спазм – теперь проходит мимо или задевает слабее.</div>
       </div>
       <div class="gain">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div>Возвращается подвижность — не как разовый эффект после сеанса, а как обычное состояние.</div>
+        <div>Возвращается подвижность – не как разовый эффект после сеанса, а как обычное состояние.</div>
       </div>
       <div class="gain">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -441,10 +455,10 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
       </div>
       <div class="gain">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div>Вы видите связь между состоянием и телом: почему зажимает именно там — и именно в такие моменты.</div>
+        <div>Вы видите связь между состоянием и телом: почему зажимает именно там – и именно в такие моменты.</div>
       </div>
     </div>
-    <p class="gains-note">Каждый организм проходит программу в своём темпе — результаты индивидуальны.</p>
+    <p class="gains-note">Каждый организм проходит программу в своём темпе – результаты индивидуальны.</p>
   </div>
 </section>
 
@@ -452,10 +466,19 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 <section style="padding:0 var(--pad) clamp(20px,4vw,40px);">
   <div class="reveal dates-card" style="max-width:var(--container);margin:0 auto;">
     <h2>Москва · с 12 августа</h2>
-    <p class="p1">Ержан принимает в Москве с 12 августа. Количество мест на программу ограничено — группа набирается заранее.</p>
+    <p class="p1">Ержан принимает в Москве с 12 августа. Количество мест на программу ограничено – группа набирается заранее.</p>
     <p class="p2">Точные даты и условия подскажет менеджер при записи.</p>
-    <a class="btn btn-solid" data-wa="program" href="#" target="_blank" rel="noopener">Узнать свободные места</a>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 24px;margin-top:32px;">
+      <a class="btn btn-solid" data-tg="program_dates" href="#" target="_blank" rel="noopener">Записаться в Telegram</a>
+      <a class="btn btn-ghost" data-wa="program" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </div>
+</section>
+
+<!-- CTA после ленты отзывов (блок отзывов пока закомментирован – пара кнопок стоит на его месте) -->
+<section class="midcta reveal" aria-label="Запись на программу">
+  <a class="btn btn-solid" data-tg="program_reviews" href="#" target="_blank" rel="noopener">Записаться в Telegram</a>
+  <a class="btn btn-ghost" data-wa="program" href="#" target="_blank" rel="noopener">WhatsApp</a>
 </section>
 
 <!--
@@ -469,7 +492,7 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
   <div class="wrap reveal">
     <div class="eyebrow school-eyebrow">Второе направление</div>
     <h2>Школа метода Ержана Тусупова</h2>
-    <p class="lead">Для остеопатов, массажистов, кинезиологов, косметологов и специалистов телесных практик — тех, кто хочет работать не только с телом.</p>
+    <p class="lead">Для остеопатов, массажистов, кинезиологов, косметологов и специалистов телесных практик – тех, кто хочет работать не только с телом.</p>
 
     <div class="school-photos">
       <div class="school-photo">
@@ -494,15 +517,15 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 
     <div class="school-grid">
       <div>
-        <p>5 дней очного обучения в небольшой группе. Лично с Ержаном — от теории до отработки техник на практике, с постановкой рук и сопровождением до результата.</p>
-        <p>Главное отличие школы: здесь учат не только техникам, но и внутреннему состоянию специалиста — работать без страха, напряжения и выгорания, быть проводником, а не работать на износ.</p>
+        <p>5 дней очного обучения в небольшой группе. Лично с Ержаном – от теории до отработки техник на практике, с постановкой рук и сопровождением до результата.</p>
+        <p>Главное отличие школы: здесь учат не только техникам, но и внутреннему состоянию специалиста – работать без страха, напряжения и выгорания, быть проводником, а не работать на износ.</p>
       </div>
       <div>
         <div class="school-benefits-title">Что получают выпускники</div>
         <div class="school-benefits">
           <div class="school-benefit">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div>Полную систему метода — все техники, без закрытых уровней</div>
+            <div>Полную систему метода – все техники, без закрытых уровней</div>
           </div>
           <div class="school-benefit">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -510,7 +533,7 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
           </div>
           <div class="school-benefit">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div>Удостоверение о повышении квалификации — через партнёрство с лицензированным центром (условия уточняйте у менеджера)</div>
+            <div>Удостоверение о повышении квалификации – через партнёрство с лицензированным центром (условия уточняйте у менеджера)</div>
           </div>
           <div class="school-benefit">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -525,18 +548,21 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
     </div>
 
     <div class="school-callout">
-      <div class="c1">На обучение проходит предварительный отбор — количество мест в группе ограничено.</div>
-      <div class="c2">Ближайший поток — ноябрь, Казахстан.</div>
+      <div class="c1">На обучение проходит предварительный отбор – количество мест в группе ограничено.</div>
+      <div class="c2">Ближайший поток – ноябрь, Казахстан.</div>
     </div>
 
-    <a class="btn btn-dark" data-wa="training" href="#" target="_blank" rel="noopener">Оставить заявку на обучение</a>
+    <div class="school-cta">
+      <a class="btn btn-dark" data-tg="training" href="#" target="_blank" rel="noopener">Заявка в Telegram</a>
+      <a class="btn btn-ghost-light" data-wa="training" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </div>
 </section>
 
 <!-- ============ БЛОК 11 · FAQ ============ -->
 <section class="section" id="faq">
   <div class="wrap faq-wrap reveal">
-    <h2 style="margin-bottom:clamp(24px,4vw,40px);">Частые вопросы</h2>
+    <h2 class="h2-caps" style="margin-bottom:clamp(24px,4vw,40px);">Частые вопросы</h2>
 
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false">
@@ -544,7 +570,7 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
         <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
       </button>
       <div class="faq-a">
-        <p>5 дней подряд, каждый день — отдельный этап работы. Продолжительность встречи уточнит менеджер при записи.</p>
+        <p>5 дней подряд, каждый день – отдельный этап работы. Продолжительность встречи уточнит менеджер при записи.</p>
       </div>
     </div>
 
@@ -555,7 +581,7 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
       </button>
       <div class="faq-a">
         <p>Да. Программа не подходит при онкологических заболеваниях и эпилепсии. Также требуют отдельного обсуждения: острые воспалительные процессы и высокая температура, тромбозы, свежие травмы и переломы, беременность, психиатрические состояния в остром периоде.</p>
-        <p>Если у вас есть хроническое заболевание — проконсультируйтесь с лечащим врачом и напишите менеджеру: он подскажет, подходит ли вам программа.</p>
+        <p>Если у вас есть хроническое заболевание – проконсультируйтесь с лечащим врачом и напишите менеджеру: он подскажет, подходит ли вам программа.</p>
       </div>
     </div>
 
@@ -565,7 +591,11 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
         <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
       </button>
       <div class="faq-a">
-        <p>Стоимость программы и обучения назовёт менеджер — напишите в WhatsApp, ответим быстро.</p>
+        <p>Стоимость программы и обучения назовёт менеджер – напишите нам, ответим быстро.</p>
+        <div class="faq-cta">
+          <a class="btn btn-ghost" data-tg="program_price" href="#" target="_blank" rel="noopener">Узнать стоимость</a>
+          <span class="alt">или <a data-wa-price href="#" target="_blank" rel="noopener">в WhatsApp</a></span>
+        </div>
       </div>
     </div>
 
@@ -575,7 +605,7 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
         <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
       </button>
       <div class="faq-a">
-        <p>Нажмите кнопку записи — откроется WhatsApp. Менеджер спросит, что вас беспокоит, подберёт даты и ответит на вопросы.</p>
+        <p>Нажмите кнопку записи – откроется Telegram-бот (или напишите в WhatsApp). Менеджер спросит, что вас беспокоит, подберёт даты и ответит на вопросы.</p>
       </div>
     </div>
 
@@ -596,23 +626,25 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 <section class="final">
   <div class="final-in reveal">
     <h2>Тело умеет восстанавливаться. Дайте ему 5 дней.</h2>
-    <p>Напишите нам — менеджер ответит на вопросы и подберёт удобные даты.</p>
+    <p>Напишите нам – менеджер ответит на вопросы и подберёт удобные даты.</p>
     <div class="final-cta">
-      <a class="btn btn-solid" data-wa="program" href="#" target="_blank" rel="noopener">Записаться на программу</a>
+      <a class="btn btn-solid" data-tg="program_final" href="#" target="_blank" rel="noopener">Записаться в Telegram</a>
+      <a class="btn btn-ghost" data-wa="program" href="#" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-ghost" href="#obuchenie">Обучение методу</a>
     </div>
   </div>
   <footer>
     <div class="wrap footer-in">
       <span>ИП Кабдрашит, Республика Казахстан</span>
-      <!-- Юридические документы: раскомментировать, когда заказчик пришлёт тексты
+      <!-- Telegram: PLACEHOLDER_BOT заменить на username бота -->
+      <span class="dot">·</span><a data-tg="program_footer" href="#" target="_blank" rel="noopener">Telegram</a>
+      <span class="dot">·</span><a data-wa="program" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <!-- Instagram: заменить # на ссылку аккаунта -->
+      <span class="dot">·</span><a href="#" target="_blank" rel="noopener">Instagram</a>
+      <!-- Юр-страницы: появятся, когда заказчик пришлёт тексты (ссылки без .html – см. LANDING-GUIDE) -->
       <span class="dot">·</span><a href="./oferta">Договор-оферта</a>
       <span class="dot">·</span><a href="./privacy">Политика конфиденциальности</a>
       <span class="dot">·</span><a href="./consent">Согласие на обработку данных</a>
-      -->
-      <!-- Instagram: добавить ссылку, когда будет известен аккаунт
-      <span class="dot">·</span><a href="https://instagram.com/..." target="_blank" rel="noopener">Instagram</a>
-      -->
     </div>
   </footer>
 </section>
@@ -620,7 +652,7 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 </main>
 
 <!-- Sticky WhatsApp -->
-<a class="sticky-cta" id="stickyCta" data-wa="program" href="#" target="_blank" rel="noopener">Записаться</a>
+<a class="sticky-cta" id="stickyCta" data-tg="program_sticky" href="#" target="_blank" rel="noopener">Записаться</a>
 
 <!-- Лайтбокс сертификата -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр сертификата">
@@ -638,11 +670,17 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
 (function(){
   "use strict";
 
-  /* ⚠ ПЛЕЙСХОЛДЕРЫ НОМЕРОВ WHATSAPP — заменить на реальные перед запуском рекламы */
-  var WA_PROGRAM  = "70000000000"; // номер для записи на программу
-  var WA_TRAINING = "70000000001"; // номер для заявок на обучение
+  /* ⚠ ПЛЕЙСХОЛДЕРЫ – заменить на реальные перед запуском рекламы */
+  var TG_BOT      = "PLACEHOLDER_BOT"; // PLACEHOLDER_BOT заменить на username бота (без @)
+  var WA_PROGRAM  = "70000000000";     // номер WhatsApp для записи на программу
+  var WA_TRAINING = "70000000001";     // номер WhatsApp для заявок на обучение
 
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Telegram-бот – основной канал; start-параметр кодирует место клика */
+  document.querySelectorAll("[data-tg]").forEach(function(a){
+    a.href = "https://t.me/" + TG_BOT + "?start=" + a.dataset.tg;
+  });
 
   function wa(num, text){ return "https://wa.me/" + num + "?text=" + encodeURIComponent(text); }
   document.querySelectorAll('[data-wa="program"]').forEach(function(a){
@@ -651,16 +689,19 @@ footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
   document.querySelectorAll('[data-wa="training"]').forEach(function(a){
     a.href = wa(WA_TRAINING, "Здравствуйте! Интересует обучение методу");
   });
+  document.querySelectorAll("[data-wa-price]").forEach(function(a){
+    a.href = wa(WA_PROGRAM, "Здравствуйте! Подскажите стоимость программы");
+  });
 
   /* ---------- Сертификаты ---------- */
   var certs = [
-    { file: "cert-1", name: "Séminaire d'ostéopathie biodynamique, niveau 1 — Alexandre Neel, D.O. (32 часа)" },
-    { file: "cert-2", name: "La cohérence cardiaque et le viscéral en biodynamie II — Alexandre Neel, D.O. (32 часа)" },
+    { file: "cert-1", name: "Séminaire d'ostéopathie biodynamique, niveau 1 – Alexandre Neel, D.O. (32 часа)" },
+    { file: "cert-2", name: "La cohérence cardiaque et le viscéral en biodynamie II – Alexandre Neel, D.O. (32 часа)" },
     { file: "cert-3", name: "Оздоровительная краниоритмическая остеопрактика 1. Структуры тела (32 часа)" },
     { file: "cert-4", name: "Оздоровительная краниоритмическая остеопрактика 2. Мозговой череп (32 часа)" },
     { file: "cert-5", name: "Оздоровительная краниоритмическая остеопрактика 3. Лицевой череп (32 часа)" },
     { file: "cert-6", name: "Оздоровительная висцеромоторная остеопрактика 4. Внутренние органы (32 часа)" },
-    { file: "cert-7", name: "Mental self-destructive programs: diagnosis and correction — КАПК (24 часа)" }
+    { file: "cert-7", name: "Mental self-destructive programs: diagnosis and correction – КАПК (24 часа)" }
   ];
   var lane = document.getElementById("certLane");
   certs.forEach(function(c, i){
