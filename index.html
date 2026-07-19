@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Метод Ержана Тусупова — программа 5 дней в Москве</title>
+<meta name="description" content="Авторская 5-дневная программа работы с телом, эмоциями и внутренним состоянием. Приём в Москве с 12 августа. Обучение методу для специалистов телесных практик.">
+<link rel="canonical" href="https://xenaja.github.io/tusupov-method/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Метод Ержана Тусупова — программа 5 дней">
+<meta property="og:description" content="Три уровня: тело, эмоции, внутреннее состояние. Работаем не с симптомом, а с причиной. Москва, приём с 12 августа.">
+<meta property="og:url" content="https://xenaja.github.io/tusupov-method/">
+<meta property="og:image" content="https://xenaja.github.io/tusupov-method/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Метод Ержана Тусупова",
+  "description": "Авторская пятидневная программа работы с телом и внутренним состоянием. Обучение методу для специалистов.",
+  "url": "https://xenaja.github.io/tusupov-method/",
+  "areaServed": ["Москва", "Алматы", "Астана"]
+}
+</script>
+<style>
+:root{
+  /* Палитра */
+  --bg:#141210;
+  --bg2:#1C1813;
+  --bg3:#0F0C08;
+  --ink:#ECE4D5;
+  --ink-soft:rgba(236,228,213,.82);
+  --muted:#A79C88;
+  --line:rgba(236,228,213,.13);
+  --accent:#C1A268;
+  --accent-h:#d6b980;
+  --btn-ink:#191307;
+  /* Светлая секция */
+  --lbg:#EEE6D5;
+  --lbg2:#E4D9C2;
+  --link2:#221D16;
+  --lmuted:#6C6252;
+  --laccent:#9a7d43;
+  /* Типографика */
+  --font-display:'Source Serif 4',Georgia,serif;
+  --font-body:'Golos Text',system-ui,-apple-system,sans-serif;
+  /* Сетка */
+  --container:1080px;
+  --pad:clamp(20px,6vw,56px);
+  --section-gap:clamp(64px,10vw,120px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+  overflow-x:hidden;
+}
+::selection{background:rgba(193,162,104,.3);color:#fff}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+a:hover{color:var(--accent-h)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10001;background:var(--accent);color:var(--btn-ink);padding:12px 20px;font-size:15px;text-decoration:none}
+.skip-link:focus{left:0}
+
+.wrap{max-width:var(--container);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+h1,h2{font-family:var(--font-display);font-weight:500}
+h2{font-size:clamp(24px,4.2vw,42px);line-height:1.16;letter-spacing:.07em;text-transform:uppercase;text-wrap:balance}
+.lead{color:var(--muted);font-size:clamp(16px,2.6vw,20px);line-height:1.55;margin-top:16px;max-width:52ch}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:48px;padding:14px 30px;border-radius:3px;
+  font-family:var(--font-body);font-size:clamp(15px,2.2vw,16px);font-weight:600;letter-spacing:.03em;
+  text-decoration:none;cursor:pointer;touch-action:manipulation;
+  transition:background .3s,color .3s,border-color .3s,transform .3s;
+}
+.btn-solid{background:var(--accent);color:var(--btn-ink)}
+.btn-solid:hover{background:var(--accent-h);color:var(--btn-ink);transform:translateY(-2px)}
+.btn-ghost{color:var(--ink);font-weight:400;letter-spacing:.02em;border:1px solid rgba(193,162,104,.5)}
+.btn-ghost:hover{color:var(--accent);border-color:var(--accent);background:rgba(193,162,104,.08)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-media{position:absolute;inset:0;background:#0f0c07}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:74% 42%}
+.hero-veil{position:absolute;inset:0;background:
+  linear-gradient(to top, rgba(14,11,7,.96) 0%, rgba(14,11,7,.66) 30%, rgba(14,11,7,.12) 62%, rgba(14,11,7,.3) 100%),
+  linear-gradient(to right, rgba(14,11,7,.82) 0%, rgba(14,11,7,.4) 34%, rgba(14,11,7,0) 62%)}
+.hero-top{position:absolute;top:0;left:0;right:0;padding:clamp(20px,4vw,34px) var(--pad);z-index:2}
+.hero-top span{font-family:var(--font-display);font-size:20px;letter-spacing:.02em}
+.hero-body{position:relative;z-index:2;max-width:var(--container);margin:0 auto;width:100%;padding:0 var(--pad) clamp(52px,9vw,104px)}
+.hero-badge{display:inline-block;font-size:clamp(11.5px,2.2vw,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(193,162,104,.4);padding:9px 15px;border-radius:2px;margin-bottom:26px}
+.hero h1{font-size:clamp(46px,10.5vw,110px);line-height:1;letter-spacing:-.015em;max-width:15ch;text-wrap:balance}
+.hero-sub{margin-top:22px;color:var(--ink-soft);font-size:clamp(17px,3vw,22px);line-height:1.5;max-width:44ch}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:36px}
+
+/* ---------- Цифры ---------- */
+.counters{background:var(--bg3);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.counters-in{display:flex;flex-wrap:wrap;gap:32px;padding-top:clamp(36px,6vw,54px);padding-bottom:clamp(36px,6vw,54px)}
+.counter{flex:1 1 200px;text-align:center}
+.counter-mid{border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.counter-num{font-family:var(--font-display);font-size:clamp(44px,8vw,64px);line-height:1;color:var(--accent)}
+.counter-cap{margin-top:8px;color:var(--muted);font-size:14px;letter-spacing:.03em}
+.counter-geo{flex:1 1 200px;text-align:center;display:flex;flex-direction:column;justify-content:center;font-family:var(--font-display);font-size:clamp(23px,3.4vw,30px);line-height:1.25}
+@media (max-width:639px){.counter-mid{border-left:none;border-right:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}}
+
+/* ---------- Секции ---------- */
+.section{padding-top:var(--section-gap);padding-bottom:var(--section-gap)}
+.section-tint{background:var(--bg2)}
+.section-light{background:var(--lbg);color:var(--link2)}
+.section-light h2{color:var(--link2)}
+
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start}
+.about-photo{position:relative;aspect-ratio:4/5;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:#130f09}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.about p{color:var(--ink-soft);font-size:clamp(16px,2.4vw,18px);line-height:1.7;margin-top:24px}
+.about p+p{margin-top:18px}
+
+.video-box{position:relative;margin-top:clamp(32px,5vw,56px);border:1px solid var(--line);border-radius:3px;overflow:hidden;background:#130f09;display:flex;justify-content:center}
+.video-box video{display:block;max-width:100%;max-height:70vh}
+
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+.lane{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.lane::-webkit-scrollbar{height:6px}
+.lane::-webkit-scrollbar-thumb{background:rgba(193,162,104,.35);border-radius:6px}
+.lane::-webkit-scrollbar-track{background:transparent}
+.cert{flex:0 0 auto;width:clamp(150px,42vw,188px);scroll-snap-align:start;background:none;border:none;padding:0;cursor:pointer;text-align:left;font-family:inherit;touch-action:manipulation}
+.cert-img{position:relative;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:#140f09;transition:border-color .3s}
+.cert:hover .cert-img{border-color:rgba(193,162,104,.6)}
+.cert-img img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top}
+.cert-name{color:var(--muted);font-size:11.5px;line-height:1.45;margin-top:10px;min-height:50px}
+.cert-note{color:var(--muted);font-size:12.5px;line-height:1.6;margin-top:14px;opacity:.85;max-width:60ch}
+
+/* ---------- С чем приходят ---------- */
+.pains{display:flex;flex-direction:column;margin-top:clamp(36px,5vw,52px)}
+.pain{display:flex;gap:clamp(18px,4vw,36px);align-items:baseline;padding:clamp(24px,4vw,34px) 0;border-top:1px solid var(--line)}
+.pain:last-child{border-bottom:1px solid var(--line)}
+.pain-num{font-family:var(--font-display);font-size:clamp(30px,5vw,44px);color:var(--accent);line-height:1;flex:0 0 auto;width:1.6em}
+.pain-title{font-size:clamp(18px,2.8vw,22px);margin-bottom:8px}
+.pain-text{color:var(--muted);font-size:clamp(15px,2.3vw,17px);line-height:1.65}
+
+/* ---------- Симптом – мало ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(36px,6vw,72px);align-items:center}
+.why-grid p{font-size:clamp(16px,2.4vw,18px);line-height:1.7;margin-top:24px}
+.why-grid p+p{margin-top:18px}
+.why-svg{display:flex;justify-content:center}
+
+/* ---------- Таймлайн ---------- */
+.tl{position:relative;margin-top:clamp(40px,6vw,64px)}
+.tl-rail,.tl-fill{position:absolute;left:25px;top:26px;width:2px}
+.tl-rail{bottom:26px;background:var(--line)}
+.tl-fill{height:0;background:var(--accent);transition:height .7s cubic-bezier(.4,0,.2,1)}
+.tl-day{position:relative;padding-left:76px;padding-bottom:clamp(28px,5vw,44px)}
+.tl-marker{position:absolute;left:0;top:0;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg2);border:1px solid rgba(236,228,213,.2);color:var(--muted);font-family:var(--font-display);font-size:24px;z-index:1;transition:border-color .5s,color .5s}
+.tl-day.is-on .tl-marker{border-color:var(--accent);color:var(--accent)}
+.tl-title{font-family:var(--font-display);font-size:clamp(22px,3.4vw,30px);margin-bottom:6px;line-height:1.15}
+.tl-text{color:var(--muted);font-size:clamp(15px,2.4vw,17px);line-height:1.65;max-width:600px}
+
+/* ---------- Что остаётся ---------- */
+.gains{display:flex;flex-direction:column;gap:clamp(18px,3vw,26px);margin-top:clamp(36px,5vw,52px)}
+.gain{display:flex;gap:16px;align-items:flex-start}
+.gain svg{flex:0 0 auto;margin-top:3px}
+.gain div{color:rgba(236,228,213,.85);font-size:clamp(16px,2.4vw,18px);line-height:1.6}
+.gains-note{color:var(--muted);font-size:12.5px;line-height:1.6;margin-top:clamp(28px,4vw,40px);opacity:.85}
+
+/* ---------- Ближайшие приёмы ---------- */
+.dates-card{background:linear-gradient(135deg,#241d13,#1a140c);border:1px solid rgba(193,162,104,.28);border-radius:4px;padding:clamp(40px,7vw,72px) clamp(28px,6vw,72px);text-align:center}
+.dates-card h2{font-size:clamp(26px,4.6vw,44px);line-height:1.12}
+.dates-card .p1{color:var(--ink-soft);font-size:clamp(16px,2.4vw,18px);line-height:1.65;margin:20px auto 0;max-width:48ch}
+.dates-card .p2{color:var(--muted);font-size:clamp(15px,2.3vw,17px);line-height:1.6;margin:12px auto 0;max-width:48ch}
+.dates-card .btn{margin-top:32px}
+
+/* ---------- Школа (светлая) ---------- */
+.school-eyebrow{color:var(--laccent)}
+.section-light .lead{color:var(--lmuted);max-width:56ch;margin-top:18px}
+.school-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:clamp(36px,5vw,52px)}
+.school-photo{position:relative;aspect-ratio:4/3;border:1px solid rgba(34,29,22,.16);border-radius:3px;overflow:hidden;background:#e7ddca}
+.school-photo img{width:100%;height:100%;object-fit:cover}
+.school-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);margin-top:clamp(40px,6vw,64px)}
+.school-grid p{font-size:clamp(16px,2.4vw,18px);line-height:1.7}
+.school-grid p+p{margin-top:18px}
+.school-benefits-title{font-family:var(--font-display);font-size:clamp(21px,3vw,26px);margin-bottom:18px}
+.school-benefits{display:flex;flex-direction:column;gap:14px}
+.school-benefit{display:flex;gap:13px;align-items:flex-start}
+.school-benefit svg{flex:0 0 auto;margin-top:2px}
+.school-benefit div{font-size:clamp(15px,2.3vw,16.5px);line-height:1.55}
+.school-callout{margin-top:clamp(36px,5vw,52px);background:var(--lbg2);border-radius:4px;padding:clamp(24px,4vw,32px)}
+.school-callout .c1{font-size:clamp(15px,2.4vw,17px);line-height:1.55;font-weight:500}
+.school-callout .c2{color:var(--lmuted);font-size:clamp(14px,2.2vw,15px);margin-top:8px}
+.btn-dark{background:var(--link2);color:var(--lbg);margin-top:clamp(28px,4vw,36px)}
+.btn-dark:hover{background:#000;color:var(--lbg);transform:translateY(-2px)}
+
+/* ---------- FAQ ---------- */
+.faq-wrap{max-width:780px}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item:last-of-type{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;background:none;border:none;padding:clamp(20px,3.5vw,26px) 0;cursor:pointer;text-align:left;font-family:var(--font-display);color:var(--ink);font-size:clamp(19px,3vw,25px);line-height:1.25;min-height:48px;touch-action:manipulation}
+.faq-q svg{flex:0 0 auto;transition:transform .3s}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 0 clamp(22px,3.5vw,28px);max-width:60ch}
+.faq-item.open .faq-a{display:block}
+.faq-a p{color:var(--muted);font-size:clamp(15px,2.4vw,17px);line-height:1.65;margin-bottom:12px}
+
+/* ---------- Финал ---------- */
+.final{position:relative;background:radial-gradient(120% 100% at 50% 0%, #201a12 0%, #141009 60%, #0f0c07 100%);padding-top:clamp(80px,13vw,150px);overflow:hidden}
+.final-in{max-width:900px;margin:0 auto;padding:0 var(--pad);text-align:center}
+.final h2{font-size:clamp(34px,7vw,72px);line-height:1.05;letter-spacing:-.015em;text-transform:none}
+.final p{color:rgba(236,228,213,.8);font-size:clamp(16px,2.6vw,20px);line-height:1.6;margin:22px auto 0;max-width:44ch}
+.final-cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 28px;margin-top:38px}
+footer{margin-top:clamp(72px,11vw,120px);border-top:1px solid var(--line)}
+.footer-in{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;color:var(--muted);font-size:13px;line-height:1.7;padding-top:clamp(28px,4vw,40px);padding-bottom:clamp(28px,4vw,40px)}
+.footer-in .dot{opacity:.4}
+.footer-in a{color:var(--muted);text-decoration:none}
+.footer-in a:hover{color:var(--accent)}
+
+/* ---------- Sticky CTA ---------- */
+.sticky-cta{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:9997;background:var(--accent);color:var(--btn-ink);font-weight:600;font-size:14px;min-height:48px;display:inline-flex;align-items:center;padding:13px 22px;border-radius:40px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45);transition:opacity .4s,transform .4s;opacity:0;transform:translateY(20px);pointer-events:none;touch-action:manipulation}
+.sticky-cta:hover{color:var(--btn-ink)}
+.sticky-cta.show{opacity:1;transform:translateY(0);pointer-events:auto}
+
+/* ---------- Лайтбокс ---------- */
+.lightbox{position:fixed;inset:0;z-index:9999;background:rgba(8,6,4,.9);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(4px)}
+.lightbox.open{display:flex}
+.lightbox-card{max-width:560px;width:100%;max-height:100%;overflow:auto}
+.lightbox-card img{width:100%;border:1px solid rgba(193,162,104,.4);border-radius:4px}
+.lightbox-name{color:var(--ink);font-size:14px;line-height:1.5;margin-top:16px;text-align:center}
+.lightbox-close{display:block;margin:14px auto 0;background:none;border:1px solid var(--line);color:var(--muted);font-family:inherit;font-size:13px;min-height:48px;padding:9px 24px;border-radius:2px;cursor:pointer;touch-action:manipulation}
+
+/* ---------- Зерно ---------- */
+.grain{position:fixed;inset:0;z-index:9995;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:140px 140px}
+
+/* ---------- Анимации ---------- */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.001ms!important;animation-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<!-- ============ БЛОК 1 · ПЕРВЫЙ ЭКРАН ============ -->
+<header class="hero" id="hero">
+  <div class="hero-media">
+    <picture>
+      <source srcset="photos/hero/hero.webp" type="image/webp">
+      <img src="photos/hero/hero.jpg" alt="Ержан Тусупов работает с человеком — руки на голове" loading="eager" fetchpriority="high" width="941" height="1672">
+    </picture>
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-top"><span>Ержан Тусупов</span></div>
+  <div class="hero-body">
+    <span class="hero-badge">Программа 5 дней · Москва · приём с 12 августа</span>
+    <h1>Авторский метод Ержана Тусупова</h1>
+    <p class="hero-sub">Три уровня: тело, эмоции, внутреннее состояние. Работаем не с симптомом, а с причиной.</p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" data-wa="program" href="#" target="_blank" rel="noopener">Записаться на программу</a>
+      <a class="btn btn-ghost" href="#obuchenie">Обучение методу</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ БЛОК 2 · ПОЛОСА ЦИФР ============ -->
+<section class="counters" aria-label="Цифры">
+  <div class="wrap counters-in">
+    <div class="counter">
+      <div class="counter-num"><span data-count-to="1800">0</span>+</div>
+      <div class="counter-cap">человек</div>
+    </div>
+    <div class="counter counter-mid">
+      <div class="counter-num"><span data-count-to="216">0</span></div>
+      <div class="counter-cap">часов профильного обучения</div>
+    </div>
+    <div class="counter-geo">Приёмы в Москве, Алматы и Астане</div>
+  </div>
+</section>
+
+<!-- ============ БЛОК 3 · ЕРЖАН ============ -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="about-grid">
+      <div class="about-photo">
+        <picture>
+          <source srcset="photos/portrait.webp" type="image/webp">
+          <img src="photos/portrait.jpg" alt="Ержан Тусупов — портрет" loading="lazy" decoding="async" width="941" height="1672">
+        </picture>
+      </div>
+      <div class="about">
+        <h2>Человек, который создал метод</h2>
+        <p>Он не из учебников — родился в работе с людьми, которым не помогали стандартные подходы. Каждая техника появилась для конкретного человека, когда ничего другого не срабатывало.</p>
+        <p>В основе — школы, которые редко собираются в руках одного специалиста: краниальные и фасциальные техники, работа с внутренними органами, биодинамика, психосоматика и подсознание.</p>
+        <p>Ержан учился в казахстанско-российской школе остеопатии и лично у Александра Нееля (D.O., Франция) — одного из ведущих преподавателей биодинамики.</p>
+      </div>
+    </div>
+
+    <div class="video-box">
+      <video controls preload="none" poster="video/poster.jpg" playsinline>
+        <source src="video/method.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+    </div>
+
+    <!-- Лента сертификатов -->
+    <div style="margin-top:clamp(48px,7vw,80px);">
+      <div class="eyebrow">Документы об обучении</div>
+      <div class="lane" id="certLane"></div>
+      <p class="cert-note">Документы оформлены на паспортное имя — Ержан Кабдрашит. Тусупов — имя, под которым Ержан работает и известен.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ БЛОК 4 · С ЧЕМ ПРИХОДЯТ ============ -->
+<section class="section section-tint">
+  <div class="wrap reveal" style="max-width:820px;">
+    <h2>С чем приходят на программу</h2>
+    <p class="lead">Чаще всего к Ержану приходят, когда массаж и процедуры уже пробовали — а результат не удержался.</p>
+    <div class="pains">
+      <div class="pain">
+        <span class="pain-num" aria-hidden="true">01</span>
+        <div>
+          <div class="pain-title">Тело</div>
+          <div class="pain-text">Хронические боли в спине, пояснице, шее. Скованность, ограниченная подвижность. Дискомфорт уходит после сеанса — и через неделю всё как было.</div>
+        </div>
+      </div>
+      <div class="pain">
+        <span class="pain-num" aria-hidden="true">02</span>
+        <div>
+          <div class="pain-title">Состояние</div>
+          <div class="pain-text">Постоянная тревожность и внутреннее напряжение. Усталость, которая не проходит после отдыха. Эмоциональное выгорание — сил нет даже на простые вещи.</div>
+        </div>
+      </div>
+      <div class="pain">
+        <span class="pain-num" aria-hidden="true">03</span>
+        <div>
+          <div class="pain-title">После тяжёлого периода</div>
+          <div class="pain-text">Тело после длительного стресса. Последствия тяжёлых периодов жизни, которые «застряли» в мышцах и не дают расслабиться.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ БЛОК 5 · СНЯТЬ СИМПТОМ – МАЛО ============ -->
+<section class="section section-light">
+  <div class="wrap reveal why-grid">
+    <div>
+      <h2>Снять симптом — мало</h2>
+      <p>Тело помнит стрессы, страхи, тяжёлые события. Это напряжение оседает в мышцах и фасциях — и никакой массаж не убирает его надолго, потому что причина остаётся внутри.</p>
+      <p>Метод Ержана работает одновременно на трёх уровнях — тело, эмоции, внутреннее состояние. Когда внутренний источник напряжения исчезает, телу больше незачем зажиматься.</p>
+    </div>
+    <div class="why-svg">
+      <svg viewBox="0 0 300 300" width="100%" style="max-width:340px;" aria-hidden="true">
+        <circle cx="150" cy="110" r="82" fill="none" stroke="#9a7d43" stroke-width="1" opacity="0.75"/>
+        <circle cx="108" cy="182" r="82" fill="none" stroke="#9a7d43" stroke-width="1" opacity="0.75"/>
+        <circle cx="192" cy="182" r="82" fill="none" stroke="#9a7d43" stroke-width="1" opacity="0.75"/>
+        <text x="150" y="72" text-anchor="middle" fill="#221D16" font-family="Source Serif 4, serif" font-size="19">тело</text>
+        <text x="72" y="212" text-anchor="middle" fill="#221D16" font-family="Source Serif 4, serif" font-size="19">эмоции</text>
+        <text x="228" y="212" text-anchor="middle" fill="#221D16" font-family="Source Serif 4, serif" font-size="19">состояние</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ БЛОК 6 · КАК РАБОТАЕТ ПРОГРАММА ============ -->
+<section class="section section-tint">
+  <div class="wrap reveal" style="max-width:820px;">
+    <h2>Как работает программа</h2>
+    <p class="lead">Каждый день снимает свой слой — и открывает следующий.</p>
+    <div class="tl">
+      <div class="tl-rail" aria-hidden="true"></div>
+      <div class="tl-fill" id="tlFill" aria-hidden="true"></div>
+      <div class="tl-day" data-day="0">
+        <div class="tl-marker" aria-hidden="true">1</div>
+        <div class="tl-title">День 1 · Память тела</div>
+        <div class="tl-text">Начинаем с физического: фасции, зажимы, старые компенсации. Мягкие мануальные техники. Многие впервые за годы чувствуют, где именно накопилось напряжение.</div>
+      </div>
+      <div class="tl-day" data-day="1">
+        <div class="tl-marker" aria-hidden="true">2</div>
+        <div class="tl-title">День 2 · Страх и контроль</div>
+        <div class="tl-text">Переходим к причинам: тревога, ожидание опасности, привычка всё контролировать. Пока внутри нет ощущения безопасности, мышцы не расслабятся.</div>
+      </div>
+      <div class="tl-day" data-day="2">
+        <div class="tl-marker" aria-hidden="true">3</div>
+        <div class="tl-title">День 3 · Опора</div>
+        <div class="tl-text">После первых двух этапов внутри появляется свободное место. Заполняем его опорой: собственный ресурс, доверие себе.</div>
+      </div>
+      <div class="tl-day" data-day="3">
+        <div class="tl-marker" aria-hidden="true">4</div>
+        <div class="tl-title">День 4 · Тишина</div>
+        <div class="tl-text">Голова успокаивается последней. Четвёртый этап — о ясности: меньше мысленного шума, суеты, прокручивания.</div>
+      </div>
+      <div class="tl-day" data-day="4">
+        <div class="tl-marker" aria-hidden="true">5</div>
+        <div class="tl-title">День 5 · Интеграция</div>
+        <div class="tl-text">Закрепляем результат, чтобы новое состояние не закончилось вместе с программой, а осталось в обычной жизни.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ БЛОК 7 · ЧТО ОСТАЁТСЯ ПОСЛЕ ============ -->
+<section class="section">
+  <div class="wrap reveal" style="max-width:820px;">
+    <h2>С чем вы уйдёте</h2>
+    <p class="lead">Программа заканчивается — результат остаётся.</p>
+    <div class="gains">
+      <div class="gain">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Тело перестаёт быть фоном. Вы замечаете напряжение раньше, чем оно превращается в боль — и знаете, что с ним делать.</div>
+      </div>
+      <div class="gain">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Реакции меняются. Что раньше вызывало зажим и спазм — теперь проходит мимо или задевает слабее.</div>
+      </div>
+      <div class="gain">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Возвращается подвижность — не как разовый эффект после сеанса, а как обычное состояние.</div>
+      </div>
+      <div class="gain">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Появляется ресурс: силы на жизнь, а не только на восстановление после недели.</div>
+      </div>
+      <div class="gain">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Вы видите связь между состоянием и телом: почему зажимает именно там — и именно в такие моменты.</div>
+      </div>
+    </div>
+    <p class="gains-note">Каждый организм проходит программу в своём темпе — результаты индивидуальны.</p>
+  </div>
+</section>
+
+<!-- ============ БЛОК 8 · БЛИЖАЙШИЕ ПРИЁМЫ ============ -->
+<section style="padding:0 var(--pad) clamp(20px,4vw,40px);">
+  <div class="reveal dates-card" style="max-width:var(--container);margin:0 auto;">
+    <h2>Москва · с 12 августа</h2>
+    <p class="p1">Ержан принимает в Москве с 12 августа. Количество мест на программу ограничено — группа набирается заранее.</p>
+    <p class="p2">Точные даты и условия подскажет менеджер при записи.</p>
+    <a class="btn btn-solid" data-wa="program" href="#" target="_blank" rel="noopener">Узнать свободные места</a>
+  </div>
+</section>
+
+<!--
+  ============ БЛОК · ОТЗЫВЫ (ЗАГОТОВКА) ============
+  Включить, когда придут скриншоты отзывов из Instagram:
+  положить в photos/reviews/review-1.webp … и раскомментировать.
+-->
+
+<!-- ============ БЛОК 10 · ОБУЧЕНИЕ (СВЕТЛАЯ ТЕМА) ============ -->
+<section class="section section-light" id="obuchenie">
+  <div class="wrap reveal">
+    <div class="eyebrow school-eyebrow">Второе направление</div>
+    <h2>Школа метода Ержана Тусупова</h2>
+    <p class="lead">Для остеопатов, массажистов, кинезиологов, косметологов и специалистов телесных практик — тех, кто хочет работать не только с телом.</p>
+
+    <div class="school-photos">
+      <div class="school-photo">
+        <picture>
+          <source srcset="photos/school/group.webp" type="image/webp">
+          <img src="photos/school/group.jpg" alt="Ержан с группой выпускников потока" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="school-photo">
+        <picture>
+          <source srcset="photos/school/hands.webp" type="image/webp">
+          <img src="photos/school/hands.jpg" alt="Ержан показывает работу руками" loading="lazy" decoding="async" style="object-position:center 30%;">
+        </picture>
+      </div>
+      <div class="school-photo">
+        <picture>
+          <source srcset="photos/school/session.webp" type="image/webp">
+          <img src="photos/school/session.jpg" alt="Ержан во время практики у стола" loading="lazy" decoding="async" style="object-position:center 25%;">
+        </picture>
+      </div>
+    </div>
+
+    <div class="school-grid">
+      <div>
+        <p>5 дней очного обучения в небольшой группе. Лично с Ержаном — от теории до отработки техник на практике, с постановкой рук и сопровождением до результата.</p>
+        <p>Главное отличие школы: здесь учат не только техникам, но и внутреннему состоянию специалиста — работать без страха, напряжения и выгорания, быть проводником, а не работать на износ.</p>
+      </div>
+      <div>
+        <div class="school-benefits-title">Что получают выпускники</div>
+        <div class="school-benefits">
+          <div class="school-benefit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Полную систему метода — все техники, без закрытых уровней</div>
+          </div>
+          <div class="school-benefit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Сертификат о прохождении курса</div>
+          </div>
+          <div class="school-benefit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Удостоверение о повышении квалификации — через партнёрство с лицензированным центром (условия уточняйте у менеджера)</div>
+          </div>
+          <div class="school-benefit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Вход в сообщество специалистов метода</div>
+          </div>
+          <div class="school-benefit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Информационная поддержка после курса; лучших выпускников Ержан рекомендует клиентам</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="school-callout">
+      <div class="c1">На обучение проходит предварительный отбор — количество мест в группе ограничено.</div>
+      <div class="c2">Ближайший поток — ноябрь, Казахстан.</div>
+    </div>
+
+    <a class="btn btn-dark" data-wa="training" href="#" target="_blank" rel="noopener">Оставить заявку на обучение</a>
+  </div>
+</section>
+
+<!-- ============ БЛОК 11 · FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq-wrap reveal">
+    <h2 style="margin-bottom:clamp(24px,4vw,40px);">Частые вопросы</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Сколько длится программа?</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>5 дней подряд, каждый день — отдельный этап работы. Продолжительность встречи уточнит менеджер при записи.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Есть ли противопоказания?</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Да. Программа не подходит при онкологических заболеваниях и эпилепсии. Также требуют отдельного обсуждения: острые воспалительные процессы и высокая температура, тромбозы, свежие травмы и переломы, беременность, психиатрические состояния в остром периоде.</p>
+        <p>Если у вас есть хроническое заболевание — проконсультируйтесь с лечащим врачом и напишите менеджеру: он подскажет, подходит ли вам программа.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Сколько стоит?</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Стоимость программы и обучения назовёт менеджер — напишите в WhatsApp, ответим быстро.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Как записаться?</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Нажмите кнопку записи — откроется WhatsApp. Менеджер спросит, что вас беспокоит, подберёт даты и ответит на вопросы.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Нужно ли как-то готовиться?</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="3" x2="10" y2="17" stroke="#C1A268" stroke-width="1.4"/><line x1="3" y1="10" x2="17" y2="10" stroke="#C1A268" stroke-width="1.4"/></svg>
+      </button>
+      <div class="faq-a">
+        <p>Специальная подготовка не нужна. Приходите в удобной одежде, не сковывающей движения.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ БЛОК 12 · ФИНАЛЬНЫЙ ЭКРАН ============ -->
+<section class="final">
+  <div class="final-in reveal">
+    <h2>Тело умеет восстанавливаться. Дайте ему 5 дней.</h2>
+    <p>Напишите нам — менеджер ответит на вопросы и подберёт удобные даты.</p>
+    <div class="final-cta">
+      <a class="btn btn-solid" data-wa="program" href="#" target="_blank" rel="noopener">Записаться на программу</a>
+      <a class="btn btn-ghost" href="#obuchenie">Обучение методу</a>
+    </div>
+  </div>
+  <footer>
+    <div class="wrap footer-in">
+      <span>ИП Кабдрашит, Республика Казахстан</span>
+      <!-- Юридические документы: раскомментировать, когда заказчик пришлёт тексты
+      <span class="dot">·</span><a href="./oferta">Договор-оферта</a>
+      <span class="dot">·</span><a href="./privacy">Политика конфиденциальности</a>
+      <span class="dot">·</span><a href="./consent">Согласие на обработку данных</a>
+      -->
+      <!-- Instagram: добавить ссылку, когда будет известен аккаунт
+      <span class="dot">·</span><a href="https://instagram.com/..." target="_blank" rel="noopener">Instagram</a>
+      -->
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<!-- Sticky WhatsApp -->
+<a class="sticky-cta" id="stickyCta" data-wa="program" href="#" target="_blank" rel="noopener">Записаться</a>
+
+<!-- Лайтбокс сертификата -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр сертификата">
+  <div class="lightbox-card">
+    <img id="lightboxImg" src="" alt="Сертификат">
+    <div class="lightbox-name" id="lightboxName"></div>
+    <button class="lightbox-close" id="lightboxClose">Закрыть</button>
+  </div>
+</div>
+
+<!-- Зерно -->
+<div class="grain" aria-hidden="true"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ⚠ ПЛЕЙСХОЛДЕРЫ НОМЕРОВ WHATSAPP — заменить на реальные перед запуском рекламы */
+  var WA_PROGRAM  = "70000000000"; // номер для записи на программу
+  var WA_TRAINING = "70000000001"; // номер для заявок на обучение
+
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function wa(num, text){ return "https://wa.me/" + num + "?text=" + encodeURIComponent(text); }
+  document.querySelectorAll('[data-wa="program"]').forEach(function(a){
+    a.href = wa(WA_PROGRAM, "Здравствуйте! Хочу записаться на программу");
+  });
+  document.querySelectorAll('[data-wa="training"]').forEach(function(a){
+    a.href = wa(WA_TRAINING, "Здравствуйте! Интересует обучение методу");
+  });
+
+  /* ---------- Сертификаты ---------- */
+  var certs = [
+    { file: "cert-1", name: "Séminaire d'ostéopathie biodynamique, niveau 1 — Alexandre Neel, D.O. (32 часа)" },
+    { file: "cert-2", name: "La cohérence cardiaque et le viscéral en biodynamie II — Alexandre Neel, D.O. (32 часа)" },
+    { file: "cert-3", name: "Оздоровительная краниоритмическая остеопрактика 1. Структуры тела (32 часа)" },
+    { file: "cert-4", name: "Оздоровительная краниоритмическая остеопрактика 2. Мозговой череп (32 часа)" },
+    { file: "cert-5", name: "Оздоровительная краниоритмическая остеопрактика 3. Лицевой череп (32 часа)" },
+    { file: "cert-6", name: "Оздоровительная висцеромоторная остеопрактика 4. Внутренние органы (32 часа)" },
+    { file: "cert-7", name: "Mental self-destructive programs: diagnosis and correction — КАПК (24 часа)" }
+  ];
+  var lane = document.getElementById("certLane");
+  certs.forEach(function(c, i){
+    var btn = document.createElement("button");
+    btn.className = "cert";
+    btn.setAttribute("aria-label", "Открыть сертификат: " + c.name);
+    btn.innerHTML =
+      '<div class="cert-img"><picture>' +
+      '<source srcset="photos/certs/' + c.file + '-thumb.webp" type="image/webp">' +
+      '<img src="photos/certs/' + c.file + '-thumb.jpg" alt="' + c.name + '" loading="lazy" decoding="async">' +
+      '</picture></div>' +
+      '<div class="cert-name">' + c.name + "</div>";
+    btn.addEventListener("click", function(){ openLightbox(i); });
+    lane.appendChild(btn);
+  });
+
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lightboxImg");
+  var lbName = document.getElementById("lightboxName");
+  function openLightbox(i){
+    lbImg.src = "photos/certs/" + certs[i].file + ".jpg";
+    lbImg.alt = certs[i].name;
+    lbName.textContent = certs[i].name;
+    lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeLightbox(){
+    lb.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  lb.addEventListener("click", function(e){ if (e.target === lb) closeLightbox(); });
+  document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeLightbox(); });
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if (reduce || !("IntersectionObserver" in window)) {
+    revealEls.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- Счётчики ---------- */
+  var strip = document.querySelector(".counters");
+  if (strip && "IntersectionObserver" in window) {
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        cio.disconnect();
+        document.querySelectorAll("[data-count-to]").forEach(function(el){
+          var to = +el.dataset.countTo;
+          if (reduce) { el.textContent = to.toLocaleString("ru-RU"); return; }
+          var dur = 1500, st = performance.now();
+          (function tick(now){
+            var p = Math.min(1, ((now || performance.now()) - st) / dur);
+            var ease = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(to * ease).toLocaleString("ru-RU");
+            if (p < 1) requestAnimationFrame(tick);
+          })(st);
+        });
+      });
+    }, { threshold: 0.4 });
+    cio.observe(strip);
+  } else {
+    document.querySelectorAll("[data-count-to]").forEach(function(el){
+      el.textContent = (+el.dataset.countTo).toLocaleString("ru-RU");
+    });
+  }
+
+  /* ---------- Таймлайн ---------- */
+  var fill = document.getElementById("tlFill");
+  var days = document.querySelectorAll(".tl-day");
+  var maxDay = 0;
+  function setDay(n){
+    maxDay = Math.max(maxDay, n);
+    fill.style.height = (Math.min(maxDay, 5) / 5 * 100) + "%";
+    days.forEach(function(d, i){ d.classList.toggle("is-on", i < maxDay); });
+  }
+  if (reduce || !("IntersectionObserver" in window)) {
+    setDay(5);
+  } else {
+    var tio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting) setDay(+e.target.dataset.day + 1);
+      });
+    }, { rootMargin: "-45% 0px -45% 0px" });
+    days.forEach(function(d){ tio.observe(d); });
+  }
+
+  /* ---------- FAQ ---------- */
+  document.querySelectorAll(".faq-q").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var item = btn.parentElement;
+      var wasOpen = item.classList.contains("open");
+      document.querySelectorAll(".faq-item.open").forEach(function(o){
+        o.classList.remove("open");
+        o.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+      });
+      if (!wasOpen) {
+        item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  /* ---------- Sticky CTA ---------- */
+  var sticky = document.getElementById("stickyCta");
+  var hero = document.getElementById("hero");
+  if ("IntersectionObserver" in window) {
+    var sio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ sticky.classList.toggle("show", !e.isIntersecting); });
+    }, { threshold: 0 });
+    sio.observe(hero);
+  } else {
+    sticky.classList.add("show");
+  }
+})();
+</script>
+</body>
+</html>

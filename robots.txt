@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xenaja.github.io/tusupov-method/sitemap.xml
