@@ -7,8 +7,8 @@
 
 ## Цель лендинга
 Основной канал — Telegram-бот (кнопки data-tg, start-параметр кодирует место клика:
-program_hero / program_dates / program_reviews / program_final / program_price /
-program_sticky / program_footer / training). WhatsApp — запасной (кнопки data-wa,
+program_menu / program_hero / program_dates / program_reviews / program_final /
+program_price / program_sticky / program_footer / training). WhatsApp — запасной (кнопки data-wa,
 два номера: программа и обучение).
 ⚠ ПЛЕЙСХОЛДЕРЫ в начале <script> в index.html: TG_BOT="PLACEHOLDER_BOT",
 номера WA 70000000000 / 70000000001. Заменить перед запуском рекламы.
