@@ -18,8 +18,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,187 +33,173 @@
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-<!-- ============ МЕНЮ (общая шапка) ============ -->
-<header class="site-header" id="siteHeader">
+<!-- ===== NAV ===== -->
+<header class="site-header">
   <nav class="nav" aria-label="Основное меню">
-    <a class="nav-brand" href="./">Ержан Кабдрашит (Тусупов)</a>
+    <a href="./" class="nav-brand">Ержан Кабдрашит <span>(Тусупов)</span></a>
     <div class="nav-links">
-      <a href="./">Сеансы</a>
-      <a href="./retreat">Ретрит</a>
-      <a href="./training" class="current">Обучение</a>
-      <a class="btn btn-solid btn-sm" href="#zapis">Оставить заявку</a>
+      <a href="./" class="link">Сеансы</a>
+      <a href="./retreat" class="link">Ретрит</a>
+      <a href="./training" class="link current">Обучение</a>
+      <a href="#zapis" class="nav-cta">Оставить заявку</a>
     </div>
     <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
-      <svg class="icon-open" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><line x1="2" y1="6" x2="20" y2="6" stroke="#ECE4D5" stroke-width="1.6"/><line x1="2" y1="11" x2="20" y2="11" stroke="#ECE4D5" stroke-width="1.6"/><line x1="2" y1="16" x2="20" y2="16" stroke="#ECE4D5" stroke-width="1.6"/></svg>
-      <svg class="icon-close" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><line x1="4" y1="4" x2="18" y2="18" stroke="#ECE4D5" stroke-width="1.6"/><line x1="18" y1="4" x2="4" y2="18" stroke="#ECE4D5" stroke-width="1.6"/></svg>
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="2" y1="5" x2="18" y2="5" stroke="#241C13" stroke-width="1.6"/><line x1="2" y1="10" x2="18" y2="10" stroke="#241C13" stroke-width="1.6"/><line x1="2" y1="15" x2="18" y2="15" stroke="#241C13" stroke-width="1.6"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><line x1="3" y1="3" x2="17" y2="17" stroke="#241C13" stroke-width="1.6"/><line x1="17" y1="3" x2="3" y2="17" stroke="#241C13" stroke-width="1.6"/></svg>
     </button>
   </nav>
 </header>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="./">Сеансы</a>
-  <a href="./retreat">Ретрит</a>
-  <a href="./training" class="current">Обучение</a>
-  <a class="btn btn-solid" href="#zapis">Оставить заявку</a>
+  <a href="./" class="link">Сеансы</a>
+  <a href="./retreat" class="link">Ретрит</a>
+  <a href="./training" class="link current">Обучение</a>
+  <a href="#zapis" class="nav-cta">Оставить заявку</a>
 </div>
 
-<!-- ============ БЛОК 1 · ПЕРВЫЙ ЭКРАН ============ -->
-<header class="hero" id="hero">
-  <div class="hero-media">
-    <picture>
-      <source srcset="photos/hero/training.webp" type="image/webp">
-      <img src="photos/hero/training.jpg" alt="Ержан Кабдрашит (Тусупов) на практике обучения" loading="eager" fetchpriority="high" style="object-position:center 25%;">
-    </picture>
-  </div>
-  <div class="hero-veil" aria-hidden="true"></div>
-  <div class="hero-body">
-    <div class="hero-kicker">Для специалистов</div>
-    <!-- ⚠ Даты и город потока – ждём от заказчика (ранее звучало: ноябрь, Казахстан – подтвердить). -->
-    <span class="hero-badge">Ближайший поток – уточняется</span>
-    <h1 class="h1-mid">Остео-биодинамический подход в работе с телом</h1>
-    <p class="hero-sub">4 дня теории и практики – 40 часов. Метод, в котором работа с телом соединяется с работой с подсознанием</p>
-    <div class="hero-cta cta-row" id="zapis">
-      <a class="btn btn-solid" data-tg="training_hero" href="#" target="_blank" rel="noopener">Оставить заявку</a>
+<!-- ===== HERO ===== -->
+<section class="hero compact" id="top">
+  <div class="hero-copy">
+    <div class="hero-center">
+      <span class="hero-badge">Для специалистов</span>
+      <h1 class="hero-h1-md">Остео-биодинамический подход в работе с телом</h1>
+      <p class="hero-sub">4 дня теории и практики – 40 часов. Метод, в котором работа с телом соединяется с работой с подсознанием</p>
+      <div class="hero-pill">Ближайший поток – уточняется</div>
+    </div>
+    <div class="hero-cta single" id="zapis">
+      <a class="btn btn-gold" data-tg="training_hero" href="#" target="_blank" rel="noopener">Оставить заявку</a>
     </div>
   </div>
-</header>
+  <div class="hero-photo">
+    <picture>
+      <source srcset="photos/about-founder.webp" type="image/webp">
+      <img src="photos/about-founder.jpg" alt="Ержан Кабдрашит (Тусупов)" loading="eager" fetchpriority="high" style="object-position:46% 14%;transform:scale(1.2);transform-origin:48% 20%;">
+    </picture>
+  </div>
+</section>
 
 <main id="main">
 
-<!-- ============ БЛОК 2 · ДЛЯ КОГО ============ -->
+<!-- ===== ДЛЯ КОГО ===== -->
 <section class="section">
-  <div class="wrap reveal prose" style="max-width:760px;">
-    <h2 style="margin-bottom:0;">Для кого</h2>
-    <p>Для массажистов, остеопатов, кинезиологов, косметологов и специалистов телесных практик. Если вы работали с телом, то знаете: иногда техники есть, а результата нет. Тело держит напряжение, а подсознание держит тело – отсюда контроль, страх и непрожитые состояния.</p>
-    <p>Эта программа – про уровень глубже: где работа с телом соединяется с подсознанием, где тело отпускает не через усилие, а через состояние, где результат приходит быстрее и держится дольше.</p>
-  </div>
-</section>
-
-<!-- ============ БЛОК 3 · СУТЬ МЕТОДА ============ -->
-<section class="section section-tint">
-  <div class="wrap reveal prose" style="max-width:760px;">
-    <h2 style="margin-bottom:0;">Суть метода</h2>
-    <p>Это синтез мягких мануальных техник, работы с атлантом и крестцом, введения клиента в альфа-состояние и работы с подсознанием.</p>
-    <div class="callout">
-      <div class="c-label">Акцент</div>
-      <div class="c-text">Вы не «чините» тело. Вы убираете причину, из-за которой оно держит напряжение.</div>
+  <div class="eyebrow">Для кого</div>
+  <div class="split-2">
+    <p class="big-quote">Для массажистов, остеопатов, кинезиологов, косметологов и специалистов телесных практик.</p>
+    <div class="about-text">
+      <p>Если вы работали с телом, то знаете: иногда техники есть, а результата нет. Тело держит напряжение, а подсознание держит тело – отсюда контроль, страх и непрожитые состояния.</p>
+      <p>Эта программа – про уровень глубже: где работа с телом соединяется с подсознанием, где тело отпускает не через усилие, а через состояние, где результат приходит быстрее и держится дольше.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ БЛОК 4 · ПРОГРАММА – ЧТО ОСВОИТЕ ЗА 4 ДНЯ ============ -->
+<!-- ===== СУТЬ МЕТОДА ===== -->
+<section class="essence">
+  <div class="essence-in">
+    <div class="eyebrow on-dark">Суть метода</div>
+    <p class="essence-lead">Это синтез мягких мануальных техник, работы с атлантом и крестцом, введения клиента в альфа-состояние и работы с подсознанием.</p>
+    <p class="essence-quote">Вы не «чините» тело. Вы убираете причину, из-за которой оно держит напряжение.</p>
+  </div>
+</section>
+
+<!-- ===== ПРОГРАММА 4 ДНЯ ===== -->
+<section class="section-narrow">
+  <h2 style="font-size:clamp(30px,4vw,50px);line-height:1.06;margin-bottom:clamp(28px,4vw,44px);">Что освоите за 4 дня</h2>
+  <div class="gains-list">
+    <div class="gain-row"><span class="gain-num">1</span><div class="gain-text">Введение клиента в альфа-состояние без гипноза</div></div>
+    <div class="gain-row"><span class="gain-num">2</span><div class="gain-text">Снятие внутреннего контроля и глубокого напряжения</div></div>
+    <div class="gain-row"><span class="gain-num">3</span><div class="gain-text">Работа с телом через подсознание</div></div>
+    <div class="gain-row"><span class="gain-num">4</span><div class="gain-text">Мягкая и точная работа с атлантом</div></div>
+    <div class="gain-row"><span class="gain-num">5</span><div class="gain-text">Освобождение крестца и восстановление опоры</div></div>
+    <div class="gain-row"><span class="gain-num">6</span><div class="gain-text">Работа с фасциями и эмоциями</div></div>
+    <div class="gain-row"><span class="gain-num">7</span><div class="gain-text">Сборка полного сеанса с устойчивым результатом</div></div>
+  </div>
+</section>
+
+<!-- ===== РЕЗУЛЬТАТ: ВАМ / КЛИЕНТАМ ===== -->
+<section class="bg-coolgrey">
+  <div class="section">
+    <div class="split-cards">
+      <div class="split-card light">
+        <h3>Результат для вас</h3>
+        <div class="split-list">
+          <div class="li"><span class="mark" style="color:#A9712B;">✦</span><span>Начнёте работать глубже, а не дольше</span></div>
+          <div class="li"><span class="mark" style="color:#A9712B;">✦</span><span>Перестанете «давить» на тело</span></div>
+          <div class="li"><span class="mark" style="color:#A9712B;">✦</span><span>Сможете снимать напряжение быстрее</span></div>
+          <div class="li"><span class="mark" style="color:#A9712B;">✦</span><span>Получите чёткий протокол работы</span></div>
+          <div class="li"><span class="mark" style="color:#A9712B;">✦</span><span>Выйдете на новый уровень как специалист</span></div>
+        </div>
+      </div>
+      <div class="split-card blue">
+        <h3>Результат для ваших клиентов</h3>
+        <div class="split-list">
+          <div class="li"><span class="mark" style="color:#E7C88A;">✦</span><span>Быстрое расслабление</span></div>
+          <div class="li"><span class="mark" style="color:#E7C88A;">✦</span><span>Ощущение лёгкости и опоры</span></div>
+          <div class="li"><span class="mark" style="color:#E7C88A;">✦</span><span>Снижение тревожности</span></div>
+          <div class="li"><span class="mark" style="color:#E7C88A;">✦</span><span>Более быстрый и устойчивый эффект от сеансов</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ВОЗМОЖНОСТИ / ДОКУМЕНТЫ / ФОРМАТ ===== -->
+<section class="section-tight" style="max-width:var(--container);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);">
+  <div class="trio-grid">
+    <div class="trio-card warm">
+      <h4>Возможности после обучения</h4>
+      <p>Лучшие выпускники получают возможность работать в центре Ержана и практиковать сразу после обучения – в окружении и с поддержкой.</p>
+    </div>
+    <div class="trio-card warm">
+      <h4>Документы</h4>
+      <!-- ⚠ Без подтверждённой лицензии на образовательную деятельность публикуем только нейтральную формулировку ниже (не «удостоверение о ПК» / «внесение в ФРДО») -->
+      <p>По завершении – сертификат о прохождении программы. Вопрос об удостоверении о повышении квалификации уточняйте у менеджера.</p>
+    </div>
+    <div class="trio-card dark">
+      <h4>Формат</h4>
+      <div class="format-list">
+        <div>4 дня · 40 часов</div>
+        <div>с 9:00 до 19:00</div>
+        <div>теория и практика</div>
+        <div>работа в парах</div>
+        <div class="hl">количество мест ограничено</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ДРУГИЕ НАПРАВЛЕНИЯ ===== -->
 <section class="section">
-  <div class="wrap reveal" style="max-width:820px;">
-    <h2>Программа – что освоите за 4 дня</h2>
-    <div class="checks">
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Введение клиента в альфа-состояние без гипноза</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Снятие внутреннего контроля и глубокого напряжения</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Работа с телом через подсознание</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Мягкая и точная работа с атлантом</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Освобождение крестца и восстановление опоры</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Работа с фасциями и эмоциями</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Сборка полного сеанса с устойчивым результатом</div></div>
-    </div>
+  <h2 style="font-size:clamp(28px,3.6vw,42px);margin-bottom:clamp(28px,4vw,40px);">Другие направления</h2>
+  <div class="other-grid">
+    <a class="other-card darkcard" href="./">
+      <h3>Индивидуальные сеансы</h3>
+      <p>Три программы восстановления.</p>
+      <span class="more">Подробнее →</span>
+    </a>
+    <a class="other-card blue" href="./retreat">
+      <h3>Ретрит «Возвращение к себе»</h3>
+      <p>Групповой формат, 3 часа.</p>
+      <span class="more">Подробнее →</span>
+    </a>
   </div>
 </section>
 
-<!-- ============ БЛОК 5 · РЕЗУЛЬТАТ ДЛЯ ВАС ============ -->
-<section class="section section-light">
-  <div class="wrap reveal" style="max-width:820px;">
-    <h2>Результат для вас</h2>
-    <div class="checks">
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Начнёте работать глубже, а не дольше</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Перестанете «давить» на тело</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Сможете снимать напряжение быстрее</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Получите чёткий протокол работы</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#9a7d43" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Выйдете на новый уровень как специалист</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ БЛОК 6 · РЕЗУЛЬТАТ ДЛЯ ВАШИХ КЛИЕНТОВ ============ -->
-<section class="section">
-  <div class="wrap reveal" style="max-width:820px;">
-    <h2>Результат для ваших клиентов</h2>
-    <div class="checks">
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Быстрое расслабление</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Ощущение лёгкости и опоры</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Снижение тревожности</div></div>
-      <div class="check"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#C1A268" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div>Более быстрый и устойчивый эффект от сеансов</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ БЛОК 7 · ВОЗМОЖНОСТИ ПОСЛЕ ОБУЧЕНИЯ ============ -->
-<section class="section section-tint">
-  <div class="wrap reveal prose" style="max-width:760px;">
-    <h2 style="margin-bottom:0;">Возможности после обучения</h2>
-    <p>Лучшие выпускники получают возможность работать в центре Ержана и практиковать сразу после обучения – в окружении и с поддержкой.</p>
-  </div>
-</section>
-
-<!-- ============ БЛОК 8 · ДОКУМЕНТЫ ============ -->
-<section class="section">
-  <div class="wrap reveal prose" style="max-width:760px;">
-    <h2 style="margin-bottom:0;">Документы</h2>
-    <p>По завершении – сертификат о прохождении программы. Вопрос об удостоверении о повышении квалификации уточняйте у менеджера.</p>
-    <!-- ⚠ В исходных материалах заявлено «Удостоверение о ПК + внесение в ФРДО». Публиковать это можно только
-         при подтверждённой лицензии на образовательную деятельность – ждём от заказчика название
-         организации-лицензиата. До подтверждения – используется формулировка выше. -->
-    <div class="warn">
-      <div class="c1">Вопрос лицензии уточняется</div>
-      <div class="c2">Формулировка про удостоверение будет обновлена, как только заказчик подтвердит организацию-лицензиата.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ БЛОК 9 · ФОРМАТ ============ -->
-<section class="section section-tint">
-  <div class="wrap reveal">
-    <h2 class="h2-caps">Формат</h2>
-    <div class="format-row">
-      <span class="format-chip">4 дня</span>
-      <span class="format-chip">с 9:00 до 19:00</span>
-      <span class="format-chip">теория и практика</span>
-      <span class="format-chip">работа в парах</span>
-      <span class="format-chip">количество мест ограничено</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ БЛОК 10 · ДРУГИЕ НАПРАВЛЕНИЯ ============ -->
-<section class="section">
-  <div class="wrap reveal">
-    <h2 class="h2-caps">Другие направления</h2>
-    <div class="other-grid">
-      <a class="other-card" href="./">
-        <h3>Индивидуальные сеансы</h3>
-        <p>Три программы восстановления.</p>
-        <span class="more">Подробнее →</span>
-      </a>
-      <a class="other-card" href="./retreat">
-        <h3>Ретрит «Возвращение к себе»</h3>
-        <p>Групповой формат, 3 часа.</p>
-        <span class="more">Подробнее →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ БЛОК 11 · ФИНАЛЬНЫЙ ЭКРАН ============ -->
-<section class="final">
-  <div class="final-in reveal">
+<!-- ===== ФИНАЛ + ФУТЕР ===== -->
+<section class="bg-black">
+  <div class="final-wrap">
     <h2>Если чувствуете, что готовы расти – эта программа для вас</h2>
-    <div class="cta-row">
-      <a class="btn btn-solid" data-tg="training_final" href="#" target="_blank" rel="noopener">Оставить заявку</a>
+    <div class="final-cta single">
+      <a class="btn btn-gold" data-tg="training_final" href="#" target="_blank" rel="noopener">Оставить заявку</a>
     </div>
   </div>
   <footer>
-    <div class="wrap footer-in">
+    <div class="footer-in">
       <span>ИП Кабдрашит, Республика Казахстан</span>
       <span class="dot">·</span><a href="./oferta">Договор-оферта</a>
       <span class="dot">·</span><a href="./privacy">Политика конфиденциальности</a>
       <span class="dot">·</span><a href="./consent">Согласие на обработку данных</a>
+      <!-- Instagram: заменить # на ссылку аккаунта -->
       <span class="dot">·</span><a href="#" target="_blank" rel="noopener">Instagram</a>
+      <!-- Telegram: PLACEHOLDER_BOT заменить на username бота (см. site.js) -->
       <span class="dot">·</span><a data-tg="training_footer" href="#" target="_blank" rel="noopener">Telegram</a>
       <span class="dot">·</span><a data-wa="Здравствуйте!" href="#" target="_blank" rel="noopener">WhatsApp</a>
     </div>
@@ -222,10 +208,6 @@
 
 </main>
 
-<a class="sticky-cta" id="stickyCta" href="#zapis">Оставить заявку</a>
-
-<div class="grain" aria-hidden="true"></div>
-
-<script src="app.js"></script>
+<script src="site.js"></script>
 </body>
 </html>
