@@ -121,7 +121,8 @@ body.menu-open{overflow:hidden}
 .certs-eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px}
 .certs-head h2{font-size:clamp(32px,4.4vw,54px);line-height:1.05;margin:0 0 20px}
 .certs-intro{font-size:17px;line-height:1.6;color:#6B5E4C;margin:0;text-wrap:pretty}
-.cert-row{display:flex;gap:22px;overflow-x:auto;overflow-y:hidden;max-width:1180px;margin:0 auto;padding:4px clamp(20px,5vw,64px) 20px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.certs-scroll{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+.cert-row{display:flex;gap:22px;overflow-x:auto;overflow-y:hidden;padding:4px 0 20px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
 .cert-row::-webkit-scrollbar{height:8px}
 .cert-row::-webkit-scrollbar-thumb{background:rgba(36,28,19,.2);border-radius:4px}
 .cert-row::-webkit-scrollbar-track{background:rgba(36,28,19,.06);border-radius:4px}
