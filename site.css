@@ -191,10 +191,12 @@ body.menu-open{overflow:hidden}
 
 /* ---------- Vertical step timeline (static) ---------- */
 .steps{display:flex;flex-direction:column}
-.step-row{display:grid;grid-template-columns:56px 1fr;gap:22px;padding-bottom:30px}
+.step-row{display:grid;grid-template-columns:56px 1fr;gap:22px;padding-bottom:30px;opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.step-row.in{opacity:1;transform:translateY(0)}
 .step-marker-col{display:flex;flex-direction:column;align-items:center}
 .step-circle{width:44px;height:44px;border-radius:999px;background:var(--ink-black);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;flex:0 0 auto}
-.step-line{flex:1 1 auto;width:1px;background:rgba(36,28,19,.18);margin-top:6px}
+.step-line{flex:1 1 auto;width:1px;background:rgba(36,28,19,.18);margin-top:6px;transform:scaleY(0);transform-origin:top;transition:transform .5s ease .2s}
+.step-row.in .step-line{transform:scaleY(1)}
 .step-body{padding-top:6px}
 .step-title{font-family:var(--font-display);font-weight:600;font-size:22px;margin-bottom:6px}
 .step-text{font-size:16px;line-height:1.55;color:#4a5560}

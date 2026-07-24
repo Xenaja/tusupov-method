@@ -14,6 +14,21 @@
 
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- Таймлайн шагов (только на странице «Ретрит») ---------- */
+  var stepRows = document.querySelectorAll(".step-row");
+  if (stepRows.length) {
+    if (reduce || !("IntersectionObserver" in window)) {
+      stepRows.forEach(function(el){ el.classList.add("in"); });
+    } else {
+      var stepIo = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if (e.isIntersecting) { e.target.classList.add("in"); stepIo.unobserve(e.target); }
+        });
+      }, { threshold: 0.35, rootMargin: "0px 0px -10% 0px" });
+      stepRows.forEach(function(el){ stepIo.observe(el); });
+    }
+  }
+
   /* ---------- Счётчики ---------- */
   function runCounter(el){
     var to = +el.dataset.countTo;
