@@ -2,7 +2,7 @@
   "use strict";
 
   /* ⚠ ПЛЕЙСХОЛДЕРЫ – заменить перед запуском рекламы */
-  var TG_BOT = "PLACEHOLDER_BOT"; // username Telegram-бота, без @ (Москва)
+  var TG_BOT = "Lids_Erzhan_bot"; // username Telegram-бота, без @ (Москва)
   var WA_KZ  = "70000000000";     // номер WhatsApp менеджера, только цифры (Казахстан)
 
   document.querySelectorAll("[data-tg]").forEach(function(a){
@@ -60,17 +60,23 @@
   var lane = document.getElementById("certLane");
   var lb = document.getElementById("lightbox");
   if (lane && lb) {
+    /* land: true — горизонтальный (landscape) скан; иначе вертикальный (portrait).
+       Два ряда: сверху вертикальные, снизу горизонтальные. */
     var certs = [
-      { file: "cert-1", name: "Séminaire d'ostéopathie biodynamique, niveau 1 – Alexandre Neel, D.O. (32 часа)" },
-      { file: "cert-2", name: "La cohérence cardiaque et le viscéral en biodynamie II – Alexandre Neel, D.O. (32 часа)" },
-      { file: "cert-3", name: "Оздоровительная краниоритмическая остеопрактика 1. Структуры тела (32 часа)" },
-      { file: "cert-4", name: "Оздоровительная краниоритмическая остеопрактика 2. Мозговой череп (32 часа)" },
-      { file: "cert-5", name: "Оздоровительная краниоритмическая остеопрактика 3. Лицевой череп (32 часа)" },
-      { file: "cert-6", name: "Оздоровительная висцеромоторная остеопрактика 4. Внутренние органы (32 часа)" },
-      { file: "cert-7", name: "Mental self-destructive programs: diagnosis and correction – КАПК (24 часа)" }
+      { file: "cert-1", land: true,  name: "Séminaire d'ostéopathie biodynamique, niveau 1 – Alexandre Neel, D.O. (32 часа)" },
+      { file: "cert-2", land: true,  name: "La cohérence cardiaque et le viscéral en biodynamie II – Alexandre Neel, D.O. (32 часа)" },
+      { file: "cert-3", land: false, name: "Оздоровительная краниоритмическая остеопрактика 1. Структуры тела (32 часа)" },
+      { file: "cert-4", land: false, name: "Оздоровительная краниоритмическая остеопрактика 2. Мозговой череп (32 часа)" },
+      { file: "cert-5", land: false, name: "Оздоровительная краниоритмическая остеопрактика 3. Лицевой череп (32 часа)" },
+      { file: "cert-6", land: false, name: "Оздоровительная висцеромоторная остеопрактика 4. Внутренние органы (32 часа)" },
+      { file: "cert-7", land: true,  name: "Mental self-destructive programs: diagnosis and correction – КАПК (24 часа)" }
     ];
     var lbImg = document.getElementById("lightboxImg");
     var lbName = document.getElementById("lightboxName");
+    var rowPortrait = document.createElement("div");
+    rowPortrait.className = "cert-row portrait";
+    var rowLandscape = document.createElement("div");
+    rowLandscape.className = "cert-row landscape";
     certs.forEach(function(c, i){
       var btn = document.createElement("button");
       btn.className = "cert";
@@ -82,8 +88,10 @@
         '</picture></div>' +
         '<div class="cert-name">' + c.name + "</div>";
       btn.addEventListener("click", function(){ openLightbox(i); });
-      lane.appendChild(btn);
+      (c.land ? rowLandscape : rowPortrait).appendChild(btn);
     });
+    lane.appendChild(rowPortrait);
+    lane.appendChild(rowLandscape);
     var openLightbox = function(i){
       lbImg.src = "photos/certs/" + certs[i].file + ".jpg?v=" + CERT_V;
       lbImg.alt = certs[i].name;
