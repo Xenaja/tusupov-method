@@ -1,15 +1,17 @@
 (function(){
   "use strict";
 
-  /* ⚠ ПЛЕЙСХОЛДЕРЫ – заменить перед запуском рекламы */
-  var TG_BOT = "Lids_Erzhan_bot"; // username Telegram-бота, без @ (Москва)
-  var WA_KZ  = "70000000000";     // номер WhatsApp менеджера, только цифры (Казахстан)
+  /* Боевые каналы записи. Москва → Telegram-бот, Казахстан → WhatsApp.
+     WA_BASE — редиректор wa.clck.bar (не wa.me), по требованию заказчика. */
+  var TG_BOT  = "Lids_Erzhan_bot";        // username Telegram-бота, без @ (Москва)
+  var WA_KZ   = "77776468773";            // номер WhatsApp менеджера (Казахстан)
+  var WA_BASE = "https://wa.clck.bar/";   // редиректор WhatsApp (домен заказчика)
 
   document.querySelectorAll("[data-tg]").forEach(function(a){
     a.href = "https://t.me/" + TG_BOT + "?start=" + a.dataset.tg;
   });
   document.querySelectorAll("[data-wa]").forEach(function(a){
-    a.href = "https://wa.me/" + WA_KZ + "?text=" + encodeURIComponent(a.dataset.wa || "Здравствуйте!");
+    a.href = WA_BASE + WA_KZ + "?text=" + encodeURIComponent(a.dataset.wa || "Добрый день!");
   });
 
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
