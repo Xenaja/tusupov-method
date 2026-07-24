@@ -56,7 +56,7 @@
   /* ---------- Сертификаты + лайтбокс (только на странице «Сеансы») ---------- */
   /* CERT_V — поднять число при каждой замене файлов cert-*.jpg/webp,
      чтобы браузер не показывал закэшированную старую версию скана */
-  var CERT_V = "2";
+  var CERT_V = "3";
   var lane = document.getElementById("certLane");
   var lb = document.getElementById("lightbox");
   if (lane && lb) {
