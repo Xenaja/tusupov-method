@@ -54,6 +54,9 @@
   }
 
   /* ---------- Сертификаты + лайтбокс (только на странице «Сеансы») ---------- */
+  /* CERT_V — поднять число при каждой замене файлов cert-*.jpg/webp,
+     чтобы браузер не показывал закэшированную старую версию скана */
+  var CERT_V = "2";
   var lane = document.getElementById("certLane");
   var lb = document.getElementById("lightbox");
   if (lane && lb) {
@@ -74,15 +77,15 @@
       btn.setAttribute("aria-label", "Открыть сертификат: " + c.name);
       btn.innerHTML =
         '<div class="cert-img"><picture>' +
-        '<source srcset="photos/certs/' + c.file + '-thumb.webp" type="image/webp">' +
-        '<img src="photos/certs/' + c.file + '-thumb.jpg" alt="' + c.name + '" loading="lazy" decoding="async">' +
+        '<source srcset="photos/certs/' + c.file + '-thumb.webp?v=' + CERT_V + '" type="image/webp">' +
+        '<img src="photos/certs/' + c.file + '-thumb.jpg?v=' + CERT_V + '" alt="' + c.name + '" loading="lazy" decoding="async">' +
         '</picture></div>' +
         '<div class="cert-name">' + c.name + "</div>";
       btn.addEventListener("click", function(){ openLightbox(i); });
       lane.appendChild(btn);
     });
     var openLightbox = function(i){
-      lbImg.src = "photos/certs/" + certs[i].file + ".jpg";
+      lbImg.src = "photos/certs/" + certs[i].file + ".jpg?v=" + CERT_V;
       lbImg.alt = certs[i].name;
       lbName.textContent = certs[i].name;
       lb.classList.add("open");
