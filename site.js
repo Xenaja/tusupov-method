@@ -4,7 +4,7 @@
   /* Боевые каналы записи. Москва → Telegram-бот, Казахстан → WhatsApp.
      WA_BASE — редиректор wa.clck.bar (не wa.me), по требованию заказчика. */
   var TG_BOT  = "Lids_Erzhan_bot";        // username Telegram-бота, без @ (Москва)
-  var WA_KZ   = "77776468773";            // номер WhatsApp менеджера (Казахстан)
+  var WA_KZ   = "77764687733";            // номер WhatsApp менеджера (Казахстан)
   var WA_BASE = "https://wa.clck.bar/";   // редиректор WhatsApp (домен заказчика)
 
   document.querySelectorAll("[data-tg]").forEach(function(a){
