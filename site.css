@@ -63,7 +63,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:760px){.nav-links{display:none}.burger{display:flex}}
 
 /* ---------- Hero (общий грид-паттерн) ---------- */
-.hero{display:grid;grid-template-columns:1fr 1.05fr;align-items:stretch;background:var(--ink-black);min-height:min(88vh,800px)}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;align-items:stretch;background:var(--ink-black);min-height:calc(100svh - 70px)}
 .hero.compact{min-height:min(84vh,760px)}
 .hero-copy{display:flex;flex-direction:column;padding:clamp(40px,5vw,72px) clamp(28px,4vw,64px)}
 .hero-center{margin:auto 0}
@@ -121,10 +121,13 @@ body.menu-open{overflow:hidden}
 .certs-eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px}
 .certs-head h2{font-size:clamp(32px,4.4vw,54px);line-height:1.05;margin:0 0 20px}
 .certs-intro{font-size:17px;line-height:1.6;color:#6B5E4C;margin:0;text-wrap:pretty}
-.cert-row{display:flex;gap:22px;overflow-x:auto;overflow-y:hidden;padding:4px clamp(20px,5vw,64px) 20px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.cert-row{display:flex;gap:22px;overflow-x:auto;overflow-y:hidden;max-width:1180px;margin:0 auto;padding:4px clamp(20px,5vw,64px) 20px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
 .cert-row::-webkit-scrollbar{height:8px}
 .cert-row::-webkit-scrollbar-thumb{background:rgba(36,28,19,.2);border-radius:4px}
 .cert-row::-webkit-scrollbar-track{background:rgba(36,28,19,.06);border-radius:4px}
+.cert-hint{max-width:1180px;margin:10px auto 0;padding:0 clamp(20px,5vw,64px);display:flex;justify-content:center;color:var(--gold)}
+@media (prefers-reduced-motion:no-preference){.cert-hint svg{animation:certNudge 1.7s ease-in-out infinite}}
+@keyframes certNudge{0%,100%{transform:translateX(-4px)}50%{transform:translateX(4px)}}
 .cert{box-sizing:border-box;flex:0 0 238px;width:238px;scroll-snap-align:start;cursor:zoom-in;display:flex;flex-direction:column;background:#FBF6EC;border:1px solid rgba(36,28,19,.1);border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(36,28,19,.05);transition:transform .25s ease,box-shadow .25s ease;padding:0;text-align:left;font-family:inherit;color:var(--ink);touch-action:manipulation}
 .cert.land{flex-basis:514px;width:514px}
 .cert:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(36,28,19,.16)}
