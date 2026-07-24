@@ -122,8 +122,43 @@
       Ваш браузер не поддерживает видео.
     </video>
   </div>
+</section>
 
-  <div class="lane" id="certLane"></div>
+<!-- ===== ДИПЛОМЫ И СЕРТИФИКАТЫ ===== -->
+<section class="certs-section" id="certs">
+  <div class="certs-head">
+    <div class="certs-head-in">
+      <div class="certs-eyebrow">Образование</div>
+      <h2>Дипломы и&nbsp;сертификаты</h2>
+      <p class="certs-intro">Метод собран из школ, которые редко встречаются в одних руках: остеопрактика, биодинамика у Alexandre&nbsp;Neel (D.O., Франция) и прикладная кинезиология. Листайте, чтобы посмотреть все&nbsp;→</p>
+    </div>
+  </div>
+  <div class="cert-row">
+    <button class="cert" type="button" data-full="photos/certs/cert-1.jpg?v=4">
+      <div class="cert-frame"><picture><source srcset="photos/certs/cert-1-thumb.webp?v=4" type="image/webp"><img src="photos/certs/cert-1-thumb.jpg?v=4" alt="Краниоритмическая остеопрактика 1 · Структуры тела" loading="lazy" decoding="async"></picture></div>
+      <div class="cert-cap"><div class="cert-issuer">Школа остеопатии А. Смирнова</div><div class="cert-title">Краниоритмическая остеопрактика&nbsp;1 · Структуры тела</div></div>
+    </button>
+    <button class="cert" type="button" data-full="photos/certs/cert-2.jpg?v=4">
+      <div class="cert-frame"><picture><source srcset="photos/certs/cert-2-thumb.webp?v=4" type="image/webp"><img src="photos/certs/cert-2-thumb.jpg?v=4" alt="Краниоритмическая остеопрактика 2 · Мозговой череп" loading="lazy" decoding="async"></picture></div>
+      <div class="cert-cap"><div class="cert-issuer">Школа остеопатии А. Смирнова</div><div class="cert-title">Краниоритмическая остеопрактика&nbsp;2 · Мозговой череп</div></div>
+    </button>
+    <button class="cert" type="button" data-full="photos/certs/cert-3.jpg?v=4">
+      <div class="cert-frame"><picture><source srcset="photos/certs/cert-3-thumb.webp?v=4" type="image/webp"><img src="photos/certs/cert-3-thumb.jpg?v=4" alt="Краниоритмическая остеопрактика 3 · Лицевой череп" loading="lazy" decoding="async"></picture></div>
+      <div class="cert-cap"><div class="cert-issuer">Школа остеопатии А. Смирнова</div><div class="cert-title">Краниоритмическая остеопрактика&nbsp;3 · Лицевой череп</div></div>
+    </button>
+    <button class="cert" type="button" data-full="photos/certs/cert-4.jpg?v=4">
+      <div class="cert-frame"><picture><source srcset="photos/certs/cert-4-thumb.webp?v=4" type="image/webp"><img src="photos/certs/cert-4-thumb.jpg?v=4" alt="Висцеромоторная остеопрактика 4 · Внутренние органы" loading="lazy" decoding="async"></picture></div>
+      <div class="cert-cap"><div class="cert-issuer">Школа остеопатии А. Смирнова</div><div class="cert-title">Висцеромоторная остеопрактика&nbsp;4 · Внутренние органы</div></div>
+    </button>
+    <button class="cert land" type="button" data-full="photos/certs/cert-5.jpg?v=4">
+      <div class="cert-frame"><picture><source srcset="photos/certs/cert-5-thumb.webp?v=4" type="image/webp"><img src="photos/certs/cert-5-thumb.jpg?v=4" alt="Сердечная когерентность и работа с внутренними органами — Alexandre Neel, D.O." loading="lazy" decoding="async"></picture></div>
+      <div class="cert-cap"><div class="cert-issuer">Биодинамика · Alexandre Neel, D.O.</div><div class="cert-title">Сердечная когерентность и работа с внутренними органами</div></div>
+    </button>
+    <button class="cert land" type="button" data-full="photos/certs/cert-6.jpg?v=4">
+      <div class="cert-frame"><picture><source srcset="photos/certs/cert-6-thumb.webp?v=4" type="image/webp"><img src="photos/certs/cert-6-thumb.jpg?v=4" alt="Ментальные саморазрушающие программы · диагностика и коррекция — КАПК" loading="lazy" decoding="async"></picture></div>
+      <div class="cert-cap"><div class="cert-issuer">КАПК · Прикладная кинезиология</div><div class="cert-title">Ментальные саморазрушающие программы · диагностика и коррекция</div></div>
+    </button>
+  </div>
 </section>
 
 <!-- ===== С ЧЕМ ПРИХОДЯТ ===== -->
@@ -334,8 +369,10 @@
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр сертификата">
   <div class="lightbox-card">
     <img id="lightboxImg" src="" alt="Сертификат">
-    <div id="lightboxName" class="lightbox-name"></div>
-    <button id="lightboxClose" class="lightbox-close">Закрыть</button>
+    <div class="lightbox-bar">
+      <span id="lightboxName"></span>
+      <span class="lightbox-hint">нажмите, чтобы закрыть</span>
+    </div>
   </div>
 </div>
 

@@ -114,17 +114,27 @@ body.menu-open{overflow:hidden}
 .video-box{margin-top:clamp(40px,5vw,64px);border-radius:14px;overflow:hidden;aspect-ratio:16/9;background:var(--ink-black);display:flex;justify-content:center}
 .video-box video{display:block;width:100%;height:100%;object-fit:cover}
 
-.lane{display:flex;flex-direction:column;gap:clamp(22px,3vw,30px);margin-top:clamp(44px,6vw,72px)}
-.cert-row{display:flex;flex-wrap:wrap;gap:16px}
-.cert{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;cursor:pointer;background:none;border:none;padding:0;text-align:left;font-family:inherit;touch-action:manipulation}
-.cert-img{background:var(--cream);border:1px solid rgba(36,28,19,.14);border-radius:10px;overflow:hidden;transition:border-color .25s}
-.cert-row.portrait .cert-img{height:clamp(230px,34vw,300px)}
-.cert-row.landscape .cert-img{height:clamp(170px,24vw,220px)}
-.cert:hover .cert-img{border-color:var(--gold)}
-.cert-img img{display:block;height:100%;width:auto}
-.cert-name{font-size:12.5px;color:var(--text-muted);line-height:1.4;margin-top:10px}
-.cert-row.portrait .cert-name{max-width:200px}
-.cert-row.landscape .cert-name{max-width:312px}
+/* ---------- Дипломы и сертификаты ---------- */
+.certs-section{background:#F7F0E2;color:var(--ink);padding:clamp(56px,8vw,110px) 0}
+.certs-head{max-width:1180px;margin:0 auto 34px;padding:0 clamp(20px,5vw,64px)}
+.certs-head-in{max-width:640px}
+.certs-eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px}
+.certs-head h2{font-size:clamp(32px,4.4vw,54px);line-height:1.05;margin:0 0 20px}
+.certs-intro{font-size:17px;line-height:1.6;color:#6B5E4C;margin:0;text-wrap:pretty}
+.cert-row{display:flex;gap:22px;overflow-x:auto;overflow-y:hidden;padding:4px clamp(20px,5vw,64px) 20px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.cert-row::-webkit-scrollbar{height:8px}
+.cert-row::-webkit-scrollbar-thumb{background:rgba(36,28,19,.2);border-radius:4px}
+.cert-row::-webkit-scrollbar-track{background:rgba(36,28,19,.06);border-radius:4px}
+.cert{box-sizing:border-box;flex:0 0 238px;width:238px;scroll-snap-align:start;cursor:zoom-in;display:flex;flex-direction:column;background:#FBF6EC;border:1px solid rgba(36,28,19,.1);border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(36,28,19,.05);transition:transform .25s ease,box-shadow .25s ease;padding:0;text-align:left;font-family:inherit;color:var(--ink);touch-action:manipulation}
+.cert.land{flex-basis:514px;width:514px}
+.cert:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(36,28,19,.16)}
+.cert-frame{height:360px;position:relative;border-bottom:1px solid rgba(36,28,19,.08);background:#fff}
+.cert-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cert-cap{padding:15px 15px 17px;display:flex;flex-direction:column;gap:7px}
+.cert.land .cert-cap{padding:15px 18px 17px}
+.cert-issuer{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.cert-title{font-size:14px;line-height:1.35;font-weight:500;text-wrap:pretty}
+@media (max-width:560px){.cert{flex-basis:220px;width:220px}.cert.land{flex-basis:400px;width:400px}.cert-frame{height:320px}}
 
 /* ---------- Lead / lists ---------- */
 .lead{font-size:18px;line-height:1.55;color:var(--text-muted);max-width:620px;margin:0 0 clamp(32px,4vw,52px)}
@@ -284,12 +294,13 @@ footer{border-top:1px solid rgba(247,240,226,.14)}
 .footer-in .dot{opacity:.4}
 
 /* ---------- Lightbox (сертификаты) ---------- */
-.lightbox{position:fixed;inset:0;z-index:99;background:rgba(22,18,13,.9);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(4px)}
-.lightbox.open{display:flex}
-.lightbox-card{max-width:520px;width:100%;max-height:100%;overflow:auto}
-.lightbox-card img{width:100%;border-radius:8px}
-.lightbox-name{color:var(--cream);font-size:14px;line-height:1.5;margin-top:16px;text-align:center}
-.lightbox-close{display:block;margin:14px auto 0;background:none;border:1px solid rgba(247,240,226,.3);color:var(--oncream);font-family:inherit;font-size:13px;min-height:48px;padding:9px 24px;border-radius:4px;cursor:pointer;touch-action:manipulation}
+@keyframes lbFade{from{opacity:0}to{opacity:1}}
+.lightbox{position:fixed;inset:0;z-index:9999;background:rgba(22,18,13,.82);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:none;place-items:center;padding:clamp(16px,4vw,56px);cursor:zoom-out}
+.lightbox.open{display:grid;animation:lbFade .18s ease}
+.lightbox-card{max-width:min(940px,94vw);max-height:90vh;background:#FBF6EC;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox-card img{display:block;width:100%;max-height:78vh;object-fit:contain;background:#fff}
+.lightbox-bar{padding:16px 22px;font-size:14.5px;color:#241C13;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.lightbox-hint{font-size:12.5px;color:#9A8B75;white-space:nowrap}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){

@@ -53,49 +53,16 @@
     }
   }
 
-  /* ---------- Сертификаты + лайтбокс (только на странице «Сеансы») ---------- */
-  /* CERT_V — поднять число при каждой замене файлов cert-*.jpg/webp,
-     чтобы браузер не показывал закэшированную старую версию скана */
-  var CERT_V = "3";
-  var lane = document.getElementById("certLane");
+  /* ---------- Сертификаты: лайтбокс (только на странице «Сеансы») ---------- */
   var lb = document.getElementById("lightbox");
-  if (lane && lb) {
-    /* land: true — горизонтальный (landscape) скан; иначе вертикальный (portrait).
-       Два ряда: сверху вертикальные, снизу горизонтальные. */
-    var certs = [
-      { file: "cert-1", land: true,  name: "Séminaire d'ostéopathie biodynamique, niveau 1 – Alexandre Neel, D.O. (32 часа)" },
-      { file: "cert-2", land: true,  name: "La cohérence cardiaque et le viscéral en biodynamie II – Alexandre Neel, D.O. (32 часа)" },
-      { file: "cert-3", land: false, name: "Оздоровительная краниоритмическая остеопрактика 1. Структуры тела (32 часа)" },
-      { file: "cert-4", land: false, name: "Оздоровительная краниоритмическая остеопрактика 2. Мозговой череп (32 часа)" },
-      { file: "cert-5", land: false, name: "Оздоровительная краниоритмическая остеопрактика 3. Лицевой череп (32 часа)" },
-      { file: "cert-6", land: false, name: "Оздоровительная висцеромоторная остеопрактика 4. Внутренние органы (32 часа)" },
-      { file: "cert-7", land: true,  name: "Mental self-destructive programs: diagnosis and correction – КАПК (24 часа)" }
-    ];
+  var certCards = document.querySelectorAll(".cert[data-full]");
+  if (lb && certCards.length) {
     var lbImg = document.getElementById("lightboxImg");
     var lbName = document.getElementById("lightboxName");
-    var rowPortrait = document.createElement("div");
-    rowPortrait.className = "cert-row portrait";
-    var rowLandscape = document.createElement("div");
-    rowLandscape.className = "cert-row landscape";
-    certs.forEach(function(c, i){
-      var btn = document.createElement("button");
-      btn.className = "cert";
-      btn.setAttribute("aria-label", "Открыть сертификат: " + c.name);
-      btn.innerHTML =
-        '<div class="cert-img"><picture>' +
-        '<source srcset="photos/certs/' + c.file + '-thumb.webp?v=' + CERT_V + '" type="image/webp">' +
-        '<img src="photos/certs/' + c.file + '-thumb.jpg?v=' + CERT_V + '" alt="' + c.name + '" loading="lazy" decoding="async">' +
-        '</picture></div>' +
-        '<div class="cert-name">' + c.name + "</div>";
-      btn.addEventListener("click", function(){ openLightbox(i); });
-      (c.land ? rowLandscape : rowPortrait).appendChild(btn);
-    });
-    lane.appendChild(rowPortrait);
-    lane.appendChild(rowLandscape);
-    var openLightbox = function(i){
-      lbImg.src = "photos/certs/" + certs[i].file + ".jpg?v=" + CERT_V;
-      lbImg.alt = certs[i].name;
-      lbName.textContent = certs[i].name;
+    var openLightbox = function(full, title){
+      lbImg.src = full;
+      lbImg.alt = title;
+      lbName.textContent = title;
       lb.classList.add("open");
       document.body.style.overflow = "hidden";
     };
@@ -103,9 +70,14 @@
       lb.classList.remove("open");
       document.body.style.overflow = "";
     };
-    lb.addEventListener("click", function(e){ if (e.target === lb) closeLightbox(); });
-    var lbClose = document.getElementById("lightboxClose");
-    if (lbClose) lbClose.addEventListener("click", closeLightbox);
+    certCards.forEach(function(card){
+      var titleEl = card.querySelector(".cert-title");
+      var title = titleEl ? titleEl.textContent : "Сертификат";
+      card.setAttribute("aria-label", "Открыть сертификат: " + title);
+      card.addEventListener("click", function(){ openLightbox(card.dataset.full, title); });
+    });
+    /* Клик в любом месте оверлея (включая само фото) закрывает — курсор zoom-out */
+    lb.addEventListener("click", closeLightbox);
     document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeLightbox(); });
   }
 
